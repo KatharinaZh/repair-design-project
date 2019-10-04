@@ -1,0 +1,312 @@
+@font-face {
+    font-family: "FuturaDemiC", sans-serif;
+    src: url('./assets/fonts/futurademic.otf') format("OpenType");
+}
+@font-face {
+    font-family: "FuturaBookC", sans-serif;
+    src: url('./assets/fonts/FuturaBookC.ttf') format("TrueType");
+}
+
+$desktop: 1440px;
+$tablet: 768px;
+$mobile: 375px;
+$primary-color: #000000;
+$emphasis-color: #E3B873;
+$secondary-color: #ffffff;
+$padding-general: 50px;
+
+@mixin flex($align:center, $justify:space-between, $direction: row) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}
+@mixin font_futura_demi($font-size: 0.9rem, $line-height: 1rem, $transform: uppercase, $color:$emphasis-color) {
+    font-family: "FuturaDemiC";
+    font-size: $font-size;
+    line-height: $line-height;
+    text-transform: $transform;
+    color: $color; 
+    font-weight: bold;
+}
+
+@mixin font_book($font-size: 0.9rem, $line-height: 1rem, $transform: uppercase, $color:$secondary-color) {
+    font-family: "FuturaBookC";
+    font-size: $font-size;
+    line-height: $line-height;
+    text-transform: $transform;
+    color: $color;
+}
+@mixin button($background: $emphasis-color, $padding: 13px 33px) {
+    padding: $padding;
+    color: $secondary-color;
+    background-color: $background;
+    box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.3);
+    border: 0;
+    border-radius: 2px;
+
+}
+
+%links {
+    text-decoration: none;
+    color: $secondary-color;
+}
+%heading-font {
+
+    font-size: 1.56rem;
+}
+
+%background {
+    width: 100%;
+    background-size: cover;
+}
+%mobile-none {
+    @media screen and (max-width: $mobile) {
+        display: none;
+    }
+}
+
+.wrapper {
+    background-color: $primary-color;
+    padding-left: $padding-general;
+    height: 100%;
+}
+
+.header {
+    padding: 0 $padding-general 0 0;
+    height: 83px;
+    @include flex();
+    @media screen and (max-width: $mobile) {
+        width: 100%;
+    }
+}
+
+.logo--link {
+    @extend %links;
+    @include font_futura_demi();
+    color: $emphasis-color;
+    margin: 30px 0 0;
+}
+
+.navbar--list {
+    list-style-type: none;
+    @include flex($align: center);
+    @extend %mobile-none;
+}
+
+.navbar--item {
+    width: calc(100% / 7);
+    margin: 0 20px;
+}
+
+.navbar--link {
+
+    display: flex;
+    justify-content: center;
+    @extend %links;
+    @include font_book();
+
+    &:hover {
+        color: lighten($emphasis-color, 10%);
+    }
+    &:active {
+        color: $emphasis-color;
+
+    }
+}
+
+.tel--link {
+    @extend %links;
+    @include font_futura_demi();
+}
+
+.header--button {
+    .button {        
+        @include font_futura_demi();
+        @include button(); 
+    }
+}
+
+.banner {
+    height: 707px;
+    background-image: url('./assets/images/background-banner.png');
+    @extend %background;
+    h2 {
+        margin: 0;
+    }
+
+}
+
+.projects {
+    height: 855px;
+    background-color: $primary-color;
+}
+
+.projects--navbar {
+    @extend %mobile-none;
+
+} 
+.projects--list {
+
+}
+.projects--item {
+
+}
+.projects--link {
+
+}
+
+.project_example {
+
+}
+.project_example--caption {
+
+}
+.project_example--description {
+
+}
+.project_example--property {
+
+}
+.project_example--property_description {
+
+}
+.slider {
+    @media screen and (max-width: $mobile) {
+    width: 100%;
+    }
+}
+.slider--image
+.slider--button {
+    .button {}
+}
+
+.online-control {
+    height: 750px;
+    background-color: $secondary-color;
+
+}
+
+.online_control--video {
+    @media screen and (max-width: $mobile) {
+        width: 100%;
+        
+    }
+}
+
+.form {
+    form{
+        @media screen and (max-width: $mobile) {
+            width: 100%;
+            @include flex ($direction:column);
+        }
+    }
+}
+
+.types_of_repair {
+    @include flex();
+    @media screen and (max-width: $mobile) {
+        @include flex ($direction:column);
+    }
+}
+
+.advantsges {
+    @extend %mobile-none;
+}
+
+.we_realise {
+    .we_realise--slider {
+        display: none;
+        @media screen and (max-width: $mobile) {
+            display: block;
+        }
+    }
+}
+
+.design-project {
+    @include flex();
+    @media screen and (max-width: $mobile) {
+        @include flex ($direction:column);
+    }
+}
+
+.how_work {
+    
+    @extend %mobile-none;
+
+}
+
+.our_team {
+    @include flex();
+    @media screen and (max-width: $mobile) {
+        @include flex ($direction:column);
+    }
+    & p:last-child {
+        @extend %mobile-none;
+    }
+}
+
+.our_clients {
+
+    @extend %mobile-none;
+}
+
+.contact_form {
+    @media screen and (max-width: $mobile) {
+        @include flex ($direction:column);
+    }
+}
+
+.map {
+    @media screen and (max-width: $mobile) {
+        width: 100%;
+    }
+
+}
+
+.footer {
+    @extend %mobile-none;
+}
+
+// .sidebar {
+//     width: 6.25%;
+//     position: fixed;
+//     left: 0;
+//     top: 0;
+//     height: 100vh;
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: space-between; 
+// }
+// .sidebar p{
+//    transform: rotate(-90deg);
+//    width: 500px;
+//    margin-left: calc(100% - 293px);
+//    font-family: 'Monserrat';
+//    margin-top: 51px;
+// }
+
+// main {
+//     height: 100vh;
+//     margin-top: 314px;
+//     display: flex;
+// }
+// main div {
+//     border: solid 5px red;
+//     flex-grow: 1;
+
+// }
+// footer {
+//     height: 20vh;;
+// }
+
+// @media (max-width: 800px) {
+//     .sidebar {
+//         display: none;
+//     }
+//     .wrapper {
+//         margin: 0;
+//         width: 100vw;
+//     }
+// }
+
