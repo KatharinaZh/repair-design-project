@@ -1,70 +1,4 @@
-@font-face {
-    font-family: "FuturaDemiC", sans-serif;
-    src: url('./assets/fonts/futurademic.otf') format("OpenType");
-}
-@font-face {
-    font-family: "FuturaBookC", sans-serif;
-    src: url('./assets/fonts/FuturaBookC.ttf') format("TrueType");
-}
-
-$desktop: 1440px;
-$tablet: 768px;
-$mobile: 375px;
-$primary-color: #000000;
-$emphasis-color: #E3B873;
-$secondary-color: #ffffff;
-$padding-general: 50px;
-
-@mixin flex($align:center, $justify:space-between, $direction: row) {
-    display: flex;
-    flex-direction: $direction;
-    justify-content: $justify;
-    align-items: $align;
-}
-@mixin font_futura_demi($font-size: 0.9rem, $line-height: 1rem, $transform: uppercase, $color:$emphasis-color) {
-    font-family: "FuturaDemiC";
-    font-size: $font-size;
-    line-height: $line-height;
-    text-transform: $transform;
-    color: $color; 
-    font-weight: bold;
-}
-
-@mixin font_book($font-size: 0.9rem, $line-height: 1rem, $transform: uppercase, $color:$secondary-color) {
-    font-family: "FuturaBookC";
-    font-size: $font-size;
-    line-height: $line-height;
-    text-transform: $transform;
-    color: $color;
-}
-@mixin button($background: $emphasis-color, $padding: 13px 33px) {
-    padding: $padding;
-    color: $secondary-color;
-    background-color: $background;
-    box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.3);
-    border: 0;
-    border-radius: 2px;
-
-}
-
-%links {
-    text-decoration: none;
-    color: $secondary-color;
-}
-%heading-font {
-
-    font-size: 1.56rem;
-}
-
-%background {
-    width: 100%;
-    background-size: cover;
-}
-%mobile-none {
-    @media screen and (max-width: $mobile) {
-        display: none;
-    }
-}
+@import "scss/variables";
 
 .wrapper {
     background-color: $primary-color;
@@ -85,7 +19,6 @@ $padding-general: 50px;
     @extend %links;
     @include font_futura_demi();
     color: $emphasis-color;
-    margin: 30px 0 0;
 }
 
 .navbar--list {
@@ -96,22 +29,23 @@ $padding-general: 50px;
 
 .navbar--item {
     width: calc(100% / 7);
-    margin: 0 20px;
+    margin: 0 1rem;
 }
 
 .navbar--link {
 
     display: flex;
     justify-content: center;
+    letter-spacing: 1px;
     @extend %links;
     @include font_book();
 
     &:hover {
         color: lighten($emphasis-color, 10%);
     }
+
     &:active {
         color: $emphasis-color;
-
     }
 }
 
@@ -121,21 +55,124 @@ $padding-general: 50px;
 }
 
 .header--button {
-    .button {        
+    .button {    
         @include font_futura_demi();
         @include button(); 
     }
 }
 
+.sidebar {
+    display: none;}
+//     // position: absolute;
+//     // left: 0;
+//     // top: 0;
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: space-between; 
+//     width: 5%;
+//     height: 100%;
+//     margin-left: -5.5%;
+    
+//     p {
+//         transform: rotate(-90deg);
+//         width: 500px;
+//         margin-left: calc(100% - 293px);
+//         // margin-top: 51px;
+
+//         a {
+//             @extend %links;
+//             @include font_futura_demi();
+//             color: $emphasis-color;
+//             &:hover {
+//                 color: lighten($emphasis-color, 10%);
+//             }
+//         }
+//     }
+// }
+
 .banner {
-    height: 707px;
+    height: 1124px;
     background-image: url('./assets/images/background-banner.png');
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     @extend %background;
+    
     h2 {
-        margin: 0;
+        width: 30%;
+        margin-left: 7%;
+        margin-top: 0;
+        margin-bottom: 0;
+        @include font_YesevaOne();
+        span {
+            color: $emphasis-color;
+        }
+    }
+    p {
+        width: 30%;
+        margin-left: 7%;
+        margin-bottom: 2%;
+        letter-spacing: 1px;
+        @include font_book($font-size: 1.37rem, $line-height: 1.88rem, $transform: none)
+    }
+    .banner--button_group {
+        display: flex;
+        flex-direction: row;
+    }
+    .banner--button {
+        @include font_futura_demi();
+        @include button($padding: 1.5rem 2rem);
+        width: 13%;
+        &:first-child {
+            margin-left: 7%;
+        }
+        &:hover {
+            color: $primary-color;
+            background-color:  $hover-color;
+            border: 0;
+        }
+    }
+    .banner--button-transparent {
+        margin: 0 0.5%;
+        background-color: transparent; 
+        border: solid 1px $emphasis-color;
+    }
+    .banner--scroll_down {
+        position: absolute;
+        top: 155%;
+        left: 0;        
+        
+        .button {
+            @include flex($align:center, $justify:space-between, $direction: row);
+            @include button($background: $primary-color,  $padding: 0);
+            width: 100%;
+            &:hover {
+                background-color: $hover-color;
+                p {
+                    color: $primary-color; 
+                }
+            }
+            p {
+            @include font_YesevaOne($font-size: 0.9rem, $line-height: 1.2rem, $transform: uppercase, $color:$secondary-color);
+            width: 90%;
+            margin: 0;
+            padding: 1rem 0 1rem 2rem;
+            }
+
+            img {
+                padding: 2rem 2.5rem 2rem 2rem;
+            }
+        }
+        
+
     }
 
 }
+
+
+
+
+
 
 .projects {
     height: 855px;
@@ -268,23 +305,7 @@ $padding-general: 50px;
     @extend %mobile-none;
 }
 
-// .sidebar {
-//     width: 6.25%;
-//     position: fixed;
-//     left: 0;
-//     top: 0;
-//     height: 100vh;
-//     display: flex;
-//     flex-direction: column;
-//     justify-content: space-between; 
-// }
-// .sidebar p{
-//    transform: rotate(-90deg);
-//    width: 500px;
-//    margin-left: calc(100% - 293px);
-//    font-family: 'Monserrat';
-//    margin-top: 51px;
-// }
+
 
 // main {
 //     height: 100vh;

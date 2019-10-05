@@ -1,0 +1,80 @@
+@font-face {
+    font-family: "FuturaDemiC", sans-serif;
+    src: url('./assets/fonts/futurademic.otf') format("OpenType");
+}
+@font-face {
+    font-family: "FuturaBookC", sans-serif;
+    src: url('./assets/fonts/FuturaBookC.ttf') format("TrueType");
+}
+@font-face {
+    font-family: "Yeseva One";
+    src: url('./assets/fonts/YesevaOne.ttf') format("TrueType");
+}
+
+$desktop: 1440px;
+$tablet: 768px;
+$mobile: 375px;
+$primary-color: #000000;
+$emphasis-color: #E3B873;
+$secondary-color: #ffffff;
+$hover-color: rgba(152,152,152,0.9);
+$padding-general: 5.5%;
+
+@mixin flex($align:center, $justify:space-between, $direction: row) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}
+@mixin font_futura_demi($font-size: 0.9rem, $line-height: 1rem, $transform: uppercase, $color:$emphasis-color) {
+    font-family: "FuturaDemiC";
+    font-size: $font-size;
+    line-height: $line-height;
+    text-transform: $transform;
+    color: $color; 
+    font-weight: bold;
+}
+
+@mixin font_book($font-size: 0.9rem, $line-height: 1rem, $transform: uppercase, $color:$secondary-color) {
+    font-family: "FuturaBookC", sans-serif;
+    font-size: $font-size;
+    line-height: $line-height;
+    text-transform: $transform;
+    color: $color;
+}
+@mixin font_YesevaOne($font-size: 2.5rem, $line-height: 3.3rem, $transform: uppercase, $color:$secondary-color) {
+    font-family: "Yeseva One";
+    font-size: $font-size;
+    line-height: $line-height;
+    font-weight: 400;
+    text-transform: $transform;
+    color: $color;
+    
+}
+@mixin button($background: $emphasis-color, $padding: 1rem 2rem) {
+    padding: $padding;
+    color: $secondary-color;
+    background-color: $background;
+    border: 0;
+    border-radius: 2px;
+
+}
+
+%links {
+    text-decoration: none;
+    color: $secondary-color;
+}
+%heading-font {
+
+    font-size: 1.56rem;
+}
+
+%background {
+    width: 100%;
+    background-size: cover;
+}
+%mobile-none {
+    @media screen and (max-width: $mobile) {
+        display: none;
+    }
+}
