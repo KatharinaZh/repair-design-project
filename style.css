@@ -13,7 +13,7 @@
   src: url("./assets/fonts/YesevaOne.ttf") format("TrueType");
 }
 
-.logo--link, .navbar--link, .tel--link {
+.logo--link, .navbar--link, .tel--link, .banner .sidebar p a {
   text-decoration: none;
   color: #ffffff;
 }
@@ -135,10 +135,6 @@
   background-color: #E3B873;
   border: 0;
   border-radius: 2px;
-}
-
-.sidebar {
-  display: none;
 }
 
 .banner {
@@ -276,6 +272,47 @@
 
 .banner .banner--scroll_down .button img {
   padding: 2rem 2.5rem 2rem 2rem;
+}
+
+.banner .sidebar {
+  position: absolute;
+  left: 0;
+  top: 1051px;
+}
+
+.banner .sidebar p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  width: 1124px;
+  height: 5%;
+  margin-left: -45%;
+}
+
+.banner .sidebar p a {
+  font-family: "FuturaDemiC";
+  font-size: 0.9rem;
+  line-height: 1rem;
+  text-transform: uppercase;
+  color: #E3B873;
+  font-weight: bold;
+  color: #E3B873;
+  margin-right: 40px;
+}
+
+.banner .sidebar p img {
+  width: 2px;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
 }
 
 .projects {

@@ -61,35 +61,6 @@
     }
 }
 
-.sidebar {
-    display: none;}
-//     // position: absolute;
-//     // left: 0;
-//     // top: 0;
-//     display: flex;
-//     flex-direction: column;
-//     justify-content: space-between; 
-//     width: 5%;
-//     height: 100%;
-//     margin-left: -5.5%;
-    
-//     p {
-//         transform: rotate(-90deg);
-//         width: 500px;
-//         margin-left: calc(100% - 293px);
-//         // margin-top: 51px;
-
-//         a {
-//             @extend %links;
-//             @include font_futura_demi();
-//             color: $emphasis-color;
-//             &:hover {
-//                 color: lighten($emphasis-color, 10%);
-//             }
-//         }
-//     }
-// }
-
 .banner {
     height: 1124px;
     background-image: url('./assets/images/background-banner.png');
@@ -165,6 +136,44 @@
         }
         
 
+    }
+
+    .sidebar {
+        position: absolute;
+        left: 0;
+        top: 1051px;
+
+    //     display: flex;
+    //     flex-direction: column;
+    //     justify-content: space-between; 
+    //     width: 5%;
+    //     height: 100%;
+    //     margin-left: -5.5%;
+        
+        p {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            transform: rotate(90deg);
+            width: 1124px;
+            height: 5%;
+            margin-left: -45%;
+            a {
+                @extend %links;
+                @include font_futura_demi();
+                color: $emphasis-color;
+                margin-right: 40px;
+                
+            }
+            
+            img {
+                width: 2px;
+                transform: rotate(90deg);
+                // padding-right: 4px;
+            }
+        
+        }
+        
     }
 
 }
@@ -304,6 +313,7 @@
 .footer {
     @extend %mobile-none;
 }
+
 
 
 
