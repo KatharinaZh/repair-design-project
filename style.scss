@@ -8,7 +8,7 @@
 
 .header {
     padding: 0 $padding-general 0 0;
-    height: 83px;
+    height: 90px;
     @include flex();
     @media screen and (max-width: $mobile) {
         width: 100%;
@@ -70,7 +70,7 @@
     @extend %background;
     
     h2 {
-        width: 30%;
+        width: 28%;
         margin-left: 7%;
         margin-top: 0;
         margin-bottom: 0;
@@ -84,7 +84,7 @@
         margin-left: 7%;
         margin-bottom: 2%;
         letter-spacing: 1px;
-        @include font_book($font-size: 1.37rem, $line-height: 1.88rem, $transform: none)
+        @include font_book($font-size: 1.37rem, $line-height: 2.2rem, $transform: none)
     }
     .banner--button_group {
         display: flex;
@@ -142,13 +142,6 @@
         position: absolute;
         left: 0;
         top: 1051px;
-
-    //     display: flex;
-    //     flex-direction: column;
-    //     justify-content: space-between; 
-    //     width: 5%;
-    //     height: 100%;
-    //     margin-left: -5.5%;
         
         p {
             display: flex;
