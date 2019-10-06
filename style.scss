@@ -8,7 +8,7 @@
 
 .header {
     padding: 0 $padding-general 0 0;
-    height: 90px;
+    height: 82px;
     @include flex();
     @media screen and (max-width: $mobile) {
         width: 100%;
@@ -62,7 +62,8 @@
 }
 
 .banner {
-    height: 1124px;
+    position: relative;
+    height: 750px;
     background-image: url('./assets/images/background-banner.png');
     display: flex;
     flex-direction: column;
@@ -70,7 +71,7 @@
     @extend %background;
     
     h2 {
-        width: 28%;
+        width: 37%;
         margin-left: 7%;
         margin-top: 0;
         margin-bottom: 0;
@@ -79,8 +80,8 @@
             color: $emphasis-color;
         }
     }
-    p {
-        width: 30%;
+    & > p {
+        width: 40%;
         margin-left: 7%;
         margin-bottom: 2%;
         letter-spacing: 1px;
@@ -92,15 +93,15 @@
     }
     .banner--button {
         @include font_futura_demi();
-        @include button($padding: 1.5rem 2rem);
-        width: 13%;
+        @include button($padding: 1rem 2rem);
+        width: 14%;
         &:first-child {
             margin-left: 7%;
         }
         &:hover {
             color: $primary-color;
             background-color:  $hover-color;
-            border: 0;
+            border: solid 1px transparent;
         }
     }
     .banner--button-transparent {
@@ -110,8 +111,8 @@
     }
     .banner--scroll_down {
         position: absolute;
-        top: 155%;
-        left: 0;        
+        top: 94%;
+        left: -6%;        
         
         .button {
             @include flex($align:center, $justify:space-between, $direction: row);
@@ -140,15 +141,15 @@
 
     .sidebar {
         position: absolute;
-        left: 0;
-        top: 1051px;
+        left: -6%;   /*relatively banner*/
+        top: 79%;
         
         p {
             display: flex;
             flex-direction: row;
             align-items: center;
             transform: rotate(90deg);
-            width: 1124px;
+            width: 750px;
             height: 5%;
             margin-left: -45%;
             a {

@@ -37,7 +37,7 @@
 
 .header {
   padding: 0 5.5% 0 0;
-  height: 90px;
+  height: 82px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -138,7 +138,8 @@
 }
 
 .banner {
-  height: 1124px;
+  position: relative;
+  height: 750px;
   background-image: url("./assets/images/background-banner.png");
   display: -webkit-box;
   display: -ms-flexbox;
@@ -153,7 +154,7 @@
 }
 
 .banner h2 {
-  width: 28%;
+  width: 37%;
   margin-left: 7%;
   margin-top: 0;
   margin-bottom: 0;
@@ -169,8 +170,8 @@
   color: #E3B873;
 }
 
-.banner p {
-  width: 30%;
+.banner > p {
+  width: 40%;
   margin-left: 7%;
   margin-bottom: 2%;
   letter-spacing: 1px;
@@ -198,12 +199,12 @@
   text-transform: uppercase;
   color: #E3B873;
   font-weight: bold;
-  padding: 1.5rem 2rem;
+  padding: 1rem 2rem;
   color: #ffffff;
   background-color: #E3B873;
   border: 0;
   border-radius: 2px;
-  width: 13%;
+  width: 14%;
 }
 
 .banner .banner--button:first-child {
@@ -213,7 +214,7 @@
 .banner .banner--button:hover {
   color: #000000;
   background-color: rgba(152, 152, 152, 0.9);
-  border: 0;
+  border: solid 1px transparent;
 }
 
 .banner .banner--button-transparent {
@@ -224,8 +225,8 @@
 
 .banner .banner--scroll_down {
   position: absolute;
-  top: 155%;
-  left: 0;
+  top: 94%;
+  left: -6%;
 }
 
 .banner .banner--scroll_down .button {
@@ -276,8 +277,9 @@
 
 .banner .sidebar {
   position: absolute;
-  left: 0;
-  top: 1051px;
+  left: -6%;
+  /*relatively banner*/
+  top: 79%;
 }
 
 .banner .sidebar p {
@@ -293,7 +295,7 @@
           align-items: center;
   -webkit-transform: rotate(90deg);
           transform: rotate(90deg);
-  width: 1124px;
+  width: 750px;
   height: 5%;
   margin-left: -45%;
 }
