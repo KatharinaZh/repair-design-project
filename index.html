@@ -7,6 +7,7 @@
     <title>IC "Repair Design Project"</title>
     <link rel="stylesheet" href="./normalize.css">    
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./assets/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
 </head>
 <body>
     <div class="wrapper">
@@ -73,39 +74,67 @@
 
 
             <div class="projects">
-                <nav class="projects--navbar"> 
-                    <ul class="projects--list">
-                        <li class="projects--item">
-                            <a class="projects--link" href="#">Rostov-on-Don, Admiral</a>
-                        </li>
-                        <li class="projects--item">
-                            <a class="projects--link" href="#">Sochi Thieves</a>
-                        </li>
-                        <li class="projects--item">
-                            <a class="projects--link" href="#">Rostov-on-Don Patriotic</a>
-                        </li>
-                    </ul>
-                </nav>
-                <div class="project_example">
-                    <h3 class="project_example--caption">Completed projects</h3>
-                    <p class="project_example--description">Only a small part of the work performed by our company is presented on the site. For 14 years on in the construction 
-                            market we have made happy more than 1000 families</p>
-                    <h4 class="project_example--property">City:</h4>
-                    <p class="project_example--property_description">Rostov-on-Don LCD admiral</p>
-                    <h4 class="project_example--property">apartment area:</h4>
-                    <p class="project_example--property_description">81 m2</p>
-                    <h4 class="project_example--property">Repair time:</h4>
-                    <p class="project_example--property_description">3.5 months</p>
-                    <h4 class="project_example--property">Repair Cost:</h4>
-                    <p class="project_example--property_description">Upon request</p>
-                </div>
-                <div class="slider">
-                    <img class="slider--image" src="./assets/images/slider-image-1.png" alt="" >
-                    <img class="slider--image" src="./assets/images/slider-image-2.png" alt="" >                    
-                    <div class="slider--button">
-                        <button class="button"></button>
+                <div class="projects--left">
+                    <div class="projects_example">
+                        <h3 class="projects_example--caption">Completed projects</h3>
+                        <div class="projects--vector">
+                            <img src="./assets/images/vector-hor.svg" alt="vector">
+                        </div>
+                        <p class="projects_example--description">Only a small part of the work performed by our company is presented on the site. For 14 years on in the construction 
+                                market we have made happy more than 1000 families</p>
+                        <div class="projects--grid">
+                            <div class="projects--grid-cell">
+                                <h4 class="projects_example--property">City:</h4>
+                                <p class="projects_example--property_description">Rostov-on-Don LCD admiral</p>
+                            </div>
+                            <div class="projects--grid-cell">
+                                <h4 class="projects_example--property">apartment area:</h4>
+                                <p class="projects_example--property_description">81 m2</p>
+                            </div>
+                            <div class="projects--grid-cell">
+                                <h4 class="projects_example--property">Repair time:</h4>
+                                <p class="projects_example--property_description">3.5 months</p>
+                            </div>
+                            <div class="projects--grid-cell">
+                                <h4 class="projects_example--property">Repair Cost:</h4>
+                                <p class="projects_example--property_description">Upon request</p>
+                            </div>
+                        </div>
+                        <ul class="slider--arrows">
+                            <li><button class="button button_arrow"><img src="./assets/images/slider-left.svg" alt=""></button></li>
+                            <li><button class="button button_cicrle"></button></li>
+                            <li><button class="button button_cicrle"></button></li>
+                            <li><button class="button button_cicrle"></button></li>
+                            <li><button class="button button_arrow"><img src="./assets/images/slider-right.svg" alt=""></button></li>
+                        </ul>
                     </div>
-                </div>
+                </div>              <!-- projects--left -->
+
+
+                <div class="projects--right">
+                    <nav class="projects--navbar"> 
+                        <ul class="projects--list">
+                            <li class="projects--item">
+                                <a class="projects--link" href="#">Rostov-on-Don, Admiral</a>
+                            </li>
+                            <li class="projects--item">
+                                <a class="projects--link" href="#">Sochi Thieves</a>
+                            </li>
+                            <li class="projects--item">
+                                <a class="projects--link" href="#">Rostov-on-Don Patriotic</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    
+                    <div class="slider">
+                        <img class="slider--image" src="./assets/images/slider-image-1.png" alt="" >
+                        <img class="slider--image" src="./assets/images/slider-image-2.png" alt="" >                    
+                        <div class="slider--button">
+                            <button class="button"><img src="./assets/images/right.svg" alt="right button"> </button>
+                        </div>
+                    </div>
+                </div>   <!-- projects--right -->
+                
             </div>              <!-- projects -->
             <div class="online_control">
                 <h4>online control</h4>

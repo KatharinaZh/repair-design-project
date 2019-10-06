@@ -10,6 +10,7 @@
     padding: 0 $padding-general 0 0;
     height: 82px;
     @include flex();
+
     @media screen and (max-width: $mobile) {
         width: 100%;
     }
@@ -33,7 +34,6 @@
 }
 
 .navbar--link {
-
     display: flex;
     justify-content: center;
     letter-spacing: 1px;
@@ -178,48 +178,154 @@
 
 
 .projects {
+    @include flex($align:left, $justify:space-between, $direction: row);
     height: 855px;
+    padding: 9% 0 0 0;
     background-color: $primary-color;
-}
-
-.projects--navbar {
-    @extend %mobile-none;
-
-} 
-.projects--list {
-
-}
-.projects--item {
-
-}
-.projects--link {
-
-}
-
-.project_example {
-
-}
-.project_example--caption {
-
-}
-.project_example--description {
-
-}
-.project_example--property {
-
-}
-.project_example--property_description {
-
-}
-.slider {
-    @media screen and (max-width: $mobile) {
     width: 100%;
+}
+
+.projects--left {
+    width: 35%;
+    
+    .projects_example {
+        text-align: left;
     }
+    .projects_example--caption {
+        @extend %h3;
+        margin: 11% 0 0 0;
+    }
+    .projects--vector {
+        text-align: center;
+    }
+    .projects_example--description {
+        @include font_book($font-size: 1.1rem, $line-height: 1.8rem, $transform: none, $color:$secondary-color);
+    }
+    .projects--grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+
+        .projects_example--property {
+            @extend %h4;
+        }
+        .projects_example--property_description {
+        @include font_book($font-size: 0.94rem, $line-height: 1.25rem, $transform: none, $color:$secondary-color);
+            
+        }
+    }
+    .slider--arrows {
+        @include flex($justify:space-evenly, $direction: row);
+        align-items: center;
+        width: 50%; 
+        position: relative;
+        top: 54px;       
+        // li {
+        //     width: 4px;
+        //     height: 10px;
+        // }
+        .button_arrow {
+            border: solid 1px transparent;
+            background-color: transparent;
+            cursor: pointer;
+            &:hover {
+                
+            }
+        }
+        
+        .button_cicrle {
+            border: 0;
+            border-radius: 50%;
+            height: 10px;
+            background-color: rgba(255, 255, 255, 0.3);
+            cursor: pointer;
+            &:hover {
+                background-color: rgba(255, 255, 255, 0.9);
+
+            }
+            
+        }
+        
+    }   
 }
-.slider--image
-.slider--button {
-    .button {}
+
+.projects--right {
+    width: 65%;
+    position: relative;
+    z-index: 1;
+
+    .projects--navbar {
+        @include flex($align: left);
+        @extend %mobile-none;
+
+        .projects--list {
+            list-style-type: none;
+            padding-left: 0;
+            @include flex($align: center);
+        }
+        
+        .projects--item {
+            // width: calc(100% / 3);
+            margin: 0 1rem;
+            &:first-child {
+                margin-left: 0;
+            }
+        }
+        
+        .projects--link {
+            display: flex;
+            justify-content: center;
+            letter-spacing: 1px;
+            @extend %links;
+            @include font_YesevaOne($font-size: 1rem, $line-height: 1.19rem, $transform: uppercase, $color: rgba(255, 255, 255, 0.3));
+        
+            &:hover {
+                color: lighten($emphasis-color, 10%);
+                text-decoration: underline;
+            }
+        
+            &:active {
+                color: $emphasis-color;
+                text-decoration: underline;
+
+            }
+        }
+      
+
+
+    } 
+    
+    .slider {
+        position: relative;
+        z-index: 1;
+        overflow: hidden;
+        width: 100%;
+
+        .slider--image {
+        }
+        @media screen and (max-width: $mobile) {
+        width: 100%;
+        }
+        .slider--button {
+        .button {
+            @include button($background: $emphasis-color, $padding: 1rem 1rem);
+            position: absolute;
+            top: 43%;
+            left: 94%;
+            border-radius: 50%;
+            width: 54px;
+            height: 54px;
+            text-align: center;
+            vertical-align: middle;
+            z-index: 5;
+        }
+        }
+    } 
+   
+    
+
 }
+
 
 .online-control {
     height: 750px;

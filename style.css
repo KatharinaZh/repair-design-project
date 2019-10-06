@@ -13,7 +13,7 @@
   src: url("./assets/fonts/YesevaOne.ttf") format("TrueType");
 }
 
-.logo--link, .navbar--link, .tel--link, .banner .sidebar p a {
+.logo--link, .navbar--link, .tel--link, .banner .sidebar p a, .projects--right .projects--navbar .projects--link {
   text-decoration: none;
   color: #ffffff;
 }
@@ -24,9 +24,27 @@
 }
 
 @media screen and (max-width: 375px) {
-  .navbar--list, .projects--navbar, .advantsges, .how_work, .our_team p:last-child, .our_clients, .footer {
+  .navbar--list, .projects--right .projects--navbar, .advantsges, .how_work, .our_team p:last-child, .our_clients, .footer {
     display: none;
   }
+}
+
+.projects--left .projects_example--caption {
+  font-family: "Yeseva One";
+  font-size: 1.69rem;
+  line-height: 2.3rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #E3B873;
+}
+
+.projects--left .projects--grid .projects_example--property {
+  font-family: "Yeseva One";
+  font-size: 1.1rem;
+  line-height: 1.6rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #E3B873;
 }
 
 .wrapper {
@@ -318,14 +336,206 @@
 }
 
 .projects {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: left;
+      -ms-flex-align: left;
+          align-items: left;
   height: 855px;
+  padding: 9% 0 0 0;
   background-color: #000000;
+  width: 100%;
+}
+
+.projects--left {
+  width: 35%;
+}
+
+.projects--left .projects_example {
+  text-align: left;
+}
+
+.projects--left .projects_example--caption {
+  margin: 11% 0 0 0;
+}
+
+.projects--left .projects--vector {
+  text-align: center;
+}
+
+.projects--left .projects_example--description {
+  font-family: "FuturaBookC", sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.8rem;
+  text-transform: none;
+  color: #ffffff;
+}
+
+.projects--left .projects--grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+}
+
+.projects--left .projects--grid .projects_example--property_description {
+  font-family: "FuturaBookC", sans-serif;
+  font-size: 0.94rem;
+  line-height: 1.25rem;
+  text-transform: none;
+  color: #ffffff;
+}
+
+.projects--left .slider--arrows {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  align-items: center;
+  width: 50%;
+  position: relative;
+  top: 54px;
+}
+
+.projects--left .slider--arrows .button_arrow {
+  border: solid 1px transparent;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.projects--left .slider--arrows .button_cicrle {
+  border: 0;
+  border-radius: 50%;
+  height: 10px;
+  background-color: rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+}
+
+.projects--left .slider--arrows .button_cicrle:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.projects--right {
+  width: 65%;
+  position: relative;
+  z-index: 1;
+}
+
+.projects--right .projects--navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: left;
+      -ms-flex-align: left;
+          align-items: left;
+}
+
+.projects--right .projects--navbar .projects--list {
+  list-style-type: none;
+  padding-left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.projects--right .projects--navbar .projects--item {
+  margin: 0 1rem;
+}
+
+.projects--right .projects--navbar .projects--item:first-child {
+  margin-left: 0;
+}
+
+.projects--right .projects--navbar .projects--link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  letter-spacing: 1px;
+  font-family: "Yeseva One";
+  font-size: 1rem;
+  line-height: 1.19rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.projects--right .projects--navbar .projects--link:hover {
+  color: #ecce9e;
+  text-decoration: underline;
+}
+
+.projects--right .projects--navbar .projects--link:active {
+  color: #E3B873;
+  text-decoration: underline;
+}
+
+.projects--right .slider {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  width: 100%;
 }
 
 @media screen and (max-width: 375px) {
-  .slider {
+  .projects--right .slider {
     width: 100%;
   }
+}
+
+.projects--right .slider .slider--button .button {
+  padding: 1rem 1rem;
+  color: #ffffff;
+  background-color: #E3B873;
+  border: 0;
+  border-radius: 2px;
+  position: absolute;
+  top: 43%;
+  left: 94%;
+  border-radius: 50%;
+  width: 54px;
+  height: 54px;
+  text-align: center;
+  vertical-align: middle;
+  z-index: 5;
 }
 
 .online-control {
