@@ -2,12 +2,11 @@
 
 .wrapper {
     background-color: $primary-color;
-    padding-left: $padding-general;
     height: 100%;
 }
 
 .header {
-    padding: 0 $padding-general 0 0;
+    padding: 0 $padding-general;
     height: 82px;
     @include flex();
 
@@ -68,6 +67,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin-left: $padding-general;
     @extend %background;
     
     h2 {
@@ -179,10 +179,10 @@
 
 .projects {
     @include flex($align:left, $justify:space-between, $direction: row);
-    height: 855px;
-    padding: 9% 0 0 0;
+    padding: 9% 0 4% $padding-general;
     background-color: $primary-color;
     width: 100%;
+
 }
 
 .projects--left {
@@ -290,9 +290,6 @@
 
             }
         }
-      
-
-
     } 
     
     .slider {
@@ -307,41 +304,146 @@
         width: 100%;
         }
         .slider--button {
-        .button {
-            @include button($background: $emphasis-color, $padding: 1rem 1rem);
-            position: absolute;
-            top: 43%;
-            left: 94%;
-            border-radius: 50%;
-            width: 54px;
-            height: 54px;
-            text-align: center;
-            vertical-align: middle;
-            z-index: 5;
+            .button {
+                @include button($background: $emphasis-color, $padding: 1rem 1rem);
+                position: absolute;
+                top: 43%;
+                left: 94%;
+                border-radius: 50%;
+                width: 54px;
+                height: 54px;
+                text-align: center;
+                vertical-align: middle;
+                z-index: 5;
+            }
         }
-        }
-    } 
-   
-    
-
-}
-
-
-.online-control {
-    height: 750px;
-    background-color: $secondary-color;
-
-}
-
-.online_control--video {
-    @media screen and (max-width: $mobile) {
-        width: 100%;
-        
     }
 }
 
+
+
+
+.online_control {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $secondary-color;
+    padding-left: $padding-general;
+    // padding-bottom: 6%;
+    background: linear-gradient(to bottom, $primary-color 35%, $secondary-color 35%);
+    h4 {
+        @extend %h4;
+        margin: 0.5rem 0;
+    }
+    .watch {
+        margin-bottom: 4%;
+    }
+    .online_control--video {
+        width: 560px;
+        margin: 0 auto;
+        @media screen and (max-width: $mobile) {
+            width: 100%;   
+        }
+    }
+    
+    .vector {
+        margin-top: 4%;
+    }
+    .online_control--description {
+        @include font_book($font-size: 1.25rem, $line-height: 2.1rem, $transform: none, $color:$primary-color);
+        text-align: center;
+        width: 54%;
+    }
+}
+
+
+
 .form {
+    background-color: $secondary-color;
+    @include flex($align:center, $justify:space-between, $direction: row);
+    justify-content: center;
+    padding: 5% 0;
     form{
+        width: 60%;
+        margin-bottom: 5%;
+        @include flex($align:center, $justify:space-between, $direction: column);
+        @include font_book($font-size: 1.1rem, $line-height: 1.5rem, $transform: none, $color:$primary-color);
+        
+        .fieldset {
+            @include flex($align:center, $justify:space-between, $direction: row);
+            border: 0;
+            margin-bottom: 3%;
+            input {
+                border: 0;
+                border-bottom: solid 1px $primary-color;
+            }
+        }
+        .field {
+            display: flex;
+            flex-direction: column;
+            margin-right: 10%;
+            label {
+                @include font_book($font-size: 0.9rem, $line-height: 1.25rem, $transform: none, $color:$hover-color);
+            }
+        }
+
+        .button {
+            @include button($background: $emphasis-color, $padding: 0.5rem 4rem);
+            @include font_futura_demi($font-size: 0.9rem, $line-height: 1.6rem, $transform: uppercase, $color:$secondary-color);
+        }
+        .checkbox {
+            input[type="checkbox"]:checked, 
+            input[type="checkbox"]:not(:checked), 
+            {
+                display: none;
+            }
+
+            input[type="checkbox"]:checked + label, 
+            input[type="checkbox"]:not(:checked) + label {
+                display: inline-block;
+                position: relative;
+                padding-left: 2rem;
+                cursor: pointer;
+            }
+
+            input[type="checkbox"]:checked + label:before, 
+            input[type="checkbox"]:not(:checked) + label:before {
+                content: "";
+                position: absolute;
+                left: 0px;
+                top: 0px;
+                width: 18px;
+                height: 18px;
+                border: 1px solid transparent;
+                background-color: $emphasis-color;
+            }
+            input[type="checkbox"]:checked + label:after, 
+            input[type="checkbox"]:not(:checked) + label:after {
+                content: "";
+                position: absolute;
+                transition: all 0.2s ease;
+            }
+
+            input[type="checkbox"]:checked + label:after, 
+            input[type="checkbox"]:not(:checked) + label:after {
+                left: 3px;
+                top: 4px;
+                width: 10px;
+                height: 5px;
+                border-radius: 1px;
+                border-left: 4px solid $secondary-color;
+                border-bottom: 4px solid $secondary-color;
+                transform: rotate(-45deg);
+            }
+            input[type="checkbox"]:not(:checked) + label:after {
+                opacity: 0;
+            }
+
+            input[type="checkbox"]:checked + label:after {
+                opacity: 1;
+            }
+        }
+
         @media screen and (max-width: $mobile) {
             width: 100%;
             @include flex ($direction:column);
