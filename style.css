@@ -19,7 +19,6 @@
 }
 
 .banner {
-  width: 100%;
   background-size: cover;
 }
 
@@ -38,7 +37,7 @@
   color: #E3B873;
 }
 
-.projects--left .projects--grid .projects_example--property, .online_control h4 {
+.projects--left .projects--grid .projects_example--property, .online_control h4, .types_of_repair h4 {
   font-family: "Yeseva One";
   font-size: 1.1rem;
   line-height: 1.6rem;
@@ -156,8 +155,6 @@
 
 .banner {
   position: relative;
-  height: 750px;
-  background-image: url("./assets/images/background-banner.png");
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -168,7 +165,11 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  width: 94%;
+  height: 750px;
   margin-left: 5.5%;
+  margin-right: 0;
+  background-image: url("./assets/images/background-banner.png");
 }
 
 .banner h2 {
@@ -351,7 +352,7 @@
           align-items: left;
   padding: 9% 0 4% 5.5%;
   background-color: #000000;
-  width: 100%;
+  width: 94%;
 }
 
 .projects--left {
@@ -509,7 +510,6 @@
 
 .projects--right .slider {
   position: relative;
-  z-index: 1;
   overflow: hidden;
   width: 100%;
 }
@@ -520,7 +520,7 @@
   }
 }
 
-.projects--right .slider .slider--button .button {
+.projects--right .slider .slider--button .slider--button-button {
   padding: 1rem 1rem;
   color: #ffffff;
   background-color: #E3B873;
@@ -529,12 +529,17 @@
   position: absolute;
   top: 43%;
   left: 94%;
-  border-radius: 50%;
+  z-index: 5;
   width: 54px;
   height: 54px;
   text-align: center;
   vertical-align: middle;
-  z-index: 5;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.projects--right .slider .slider--button .slider--button-button:hover {
+  background-color: #c88b28;
 }
 
 .online_control {
@@ -550,8 +555,8 @@
           align-items: center;
   background-color: #ffffff;
   padding-left: 5.5%;
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(35%, #000000), color-stop(35%, #ffffff));
-  background: linear-gradient(to bottom, #000000 35%, #ffffff 35%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(43%, #000000), color-stop(43%, #ffffff));
+  background: linear-gradient(to bottom, #000000 43%, #ffffff 43%);
 }
 
 .online_control h4 {
@@ -610,7 +615,6 @@
 
 .form form {
   width: 60%;
-  margin-bottom: 5%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -673,7 +677,7 @@
   color: rgba(152, 152, 152, 0.9);
 }
 
-.form form .button {
+.form form .form--button {
   padding: 0.5rem 4rem;
   color: #ffffff;
   background-color: #E3B873;
@@ -764,34 +768,112 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  background-color: #ffffff;
 }
 
-@media screen and (max-width: 375px) {
-  .types_of_repair {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
+.types_of_repair .types_of_repair--images {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 2%;
+}
+
+.types_of_repair .types_of_repair--images img {
+  width: 32%;
+}
+
+.types_of_repair .types_of_repair--paragraphs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  top: -6rem;
+  width: 100%;
+}
+
+.types_of_repair .types_of_repair--paragraphs-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: left;
+      -ms-flex-align: left;
+          align-items: left;
+  width: 20%;
+  margin: 0 3%;
+  background-color: #ffffff;
+  -webkit-box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03);
+          box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03);
+}
+
+.types_of_repair .heading {
+  font-family: "Yeseva One";
+  font-size: 1.1rem;
+  line-height: 1.6em;
+  font-weight: 400;
+  text-transform: none;
+  color: #000000;
+  padding-left: 10%;
+}
+
+.types_of_repair .types_of_repair--item {
+  font-family: "FuturaBookC", sans-serif;
+  font-size: 0.9rem;
+  line-height: 1.6rem;
+  text-transform: none;
+  color: rgba(152, 152, 152, 0.9);
+}
+
+.types_of_repair .types_of_repair--button {
+  font-family: "Yeseva One";
+  font-size: 1.1rem;
+  line-height: 1.6em;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #ffffff;
+  padding: 1rem 1rem;
+  color: #ffffff;
+  background-color: #E3B873;
+  border: 0;
+  border-radius: 2px;
+  position: relative;
+  top: 1.5rem;
+  width: 63%;
 }
 
 .we_realise .we_realise--slider {

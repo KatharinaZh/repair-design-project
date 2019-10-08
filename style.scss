@@ -61,14 +61,16 @@
 }
 
 .banner {
+    @extend %background;
     position: relative;
-    height: 750px;
-    background-image: url('./assets/images/background-banner.png');
     display: flex;
     flex-direction: column;
     justify-content: center;
+    width: 94%;
+    height: 750px;
     margin-left: $padding-general;
-    @extend %background;
+    margin-right: 0;
+    background-image: url('./assets/images/background-banner.png');
     
     h2 {
         width: 37%;
@@ -181,7 +183,7 @@
     @include flex($align:left, $justify:space-between, $direction: row);
     padding: 9% 0 4% $padding-general;
     background-color: $primary-color;
-    width: 100%;
+    width: 94%;
 
 }
 
@@ -294,7 +296,7 @@
     
     .slider {
         position: relative;
-        z-index: 1;
+        // z-index: 1;
         overflow: hidden;
         width: 100%;
 
@@ -304,17 +306,21 @@
         width: 100%;
         }
         .slider--button {
-            .button {
+            .slider--button-button {
                 @include button($background: $emphasis-color, $padding: 1rem 1rem);
                 position: absolute;
                 top: 43%;
                 left: 94%;
-                border-radius: 50%;
+                z-index: 5;
                 width: 54px;
                 height: 54px;
                 text-align: center;
                 vertical-align: middle;
-                z-index: 5;
+                border-radius: 50%;
+                cursor: pointer;
+                &:hover {
+                    background-color: darken($color: $emphasis-color, $amount: 20)
+                }
             }
         }
     }
@@ -330,7 +336,7 @@
     background-color: $secondary-color;
     padding-left: $padding-general;
     // padding-bottom: 6%;
-    background: linear-gradient(to bottom, $primary-color 35%, $secondary-color 35%);
+    background: linear-gradient(to bottom, $primary-color 43%, $secondary-color 43%);
     h4 {
         @extend %h4;
         margin: 0.5rem 0;
@@ -365,7 +371,6 @@
     padding: 5% 0;
     form{
         width: 60%;
-        margin-bottom: 5%;
         @include flex($align:center, $justify:space-between, $direction: column);
         @include font_book($font-size: 1.1rem, $line-height: 1.5rem, $transform: none, $color:$primary-color);
         
@@ -387,7 +392,7 @@
             }
         }
 
-        .button {
+        .form--button {
             @include button($background: $emphasis-color, $padding: 0.5rem 4rem);
             @include font_futura_demi($font-size: 0.9rem, $line-height: 1.6rem, $transform: uppercase, $color:$secondary-color);
         }
@@ -452,10 +457,64 @@
 }
 
 .types_of_repair {
-    @include flex();
-    @media screen and (max-width: $mobile) {
-        @include flex ($direction:column);
+    @include flex($align:center, $justify:space-between, $direction: column);
+    // align-items: center;
+    background-color: $secondary-color;
+    // display: flex;
+    // flex-direction: column;
+    
+    h4 {
+        @extend %h4;
     }
+    
+    .types_of_repair--images {
+        @include flex($align:center, $justify:space-around, $direction: row);
+        margin-top: 2%;
+        
+        img {
+            width: 32%;
+        }
+    }
+    
+    .types_of_repair--paragraphs {
+        @include flex($align:center, $justify:center, $direction: row);
+        position: relative;
+        top: -6rem;
+        width: 100%;
+    }
+    .types_of_repair--paragraphs-item {  
+        @include flex($align:left, $justify:space-between, $direction: column);
+        width: 20%;
+        margin: 0 3%;
+        background-color: $secondary-color;
+        box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03);
+
+          
+
+    }
+    .heading {
+        @include font_YesevaOne($font-size: 1.1rem, $line-height: 1.6em, $transform: none, $color:$primary-color);
+        padding-left: 10%;
+    }
+    .types_of_repair--item {
+        @include font_book($font-size: 0.9rem, $line-height: 1.6rem, $transform: none, $color:$hover-color);
+        
+    }
+    .types_of_repair--button {
+        @include font_YesevaOne($font-size: 1.1rem, $line-height: 1.6em, $transform: uppercase, $color:$secondary-color);
+        @include button($background: $emphasis-color, $padding: 1rem 1rem);
+        position: relative;
+        top: 1.5rem;
+        width: 63%;
+        
+    }
+        
+        
+    
+    
+    // @media screen and (max-width: $mobile) {
+    //     @include flex ($direction:column);
+    // }
 }
 
 .advantsges {
