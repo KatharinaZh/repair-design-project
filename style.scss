@@ -670,6 +670,11 @@
         color: $primary-color;
     }
 
+    .design_project--description {
+        width: 50%;
+        @include font_book($font-size: 1.25rem, $line-height: 1.7rem, $transform: none, $color:$primary-color);
+        text-align: center;
+    }
     
     .design_project--images {
         @include flex($align:center, $justify:space-around, $direction: row);
@@ -715,9 +720,6 @@
         top: 1.5rem;
         width: 63%;  
     }
-
-
-
 
     @media screen and (max-width: $mobile) {
         @include flex ($direction:column);
@@ -848,7 +850,109 @@
 }
 
 .our_team {
-    @include flex();
+   
+    @include flex($align:center, $justify:space-between, $direction: column);
+    background: linear-gradient(to bottom, $primary-color 50%, $secondary-color 50%);
+    // padding-top: 10%;
+
+    .our_team--caption {
+        @extend %h4;
+        font-family: "Yeseva One", serif;
+        color: $secondary-color;
+    }
+
+    .our_team--description-top {
+        width: 50%;
+        @include font_book($font-size: 1.25rem, $line-height: 1.7rem, $transform: none, $color:$secondary-color);
+        text-align: center;
+    }
+    
+    .our_team--images {
+        @include flex($align:center, $justify:space-around, $direction: row);
+        margin-top: 2%;
+        
+    }
+    .images_group {
+        position: relative;
+        width: 32%;
+        margin-left: 10%;
+        &:first-child {
+            margin-left: 0;
+        }
+
+        .our_team--icon {
+            position: absolute;
+            top: -13%;
+            left: -21%;
+        }
+    }
+    .our_team--paragraphs {
+        @include flex($align:flex-start, $justify:center, $direction: row);
+        position: relative;
+        top: -6rem;
+        width: 100%;
+    }
+
+    .our_team--paragraphs-item {  
+        @include flex($align:center, $justify:space-between, $direction: column);
+        width: 15%;
+        margin: 0 3%;
+        background-color: $secondary-color;
+        box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03);
+        &:nth-child(2) {
+            margin: 0 5%;
+        }
+
+        &:last-child::after {
+            content: "";
+            display: block;
+            width: 5.2rem;
+            border-bottom: solid 2px #E3B873;
+            position: absolute;
+            top: 161%;
+            left: 47%;
+        }
+    }
+
+    .heading {
+        @include font_YesevaOne($font-size: 1.1rem, $line-height: 1.6em, $transform: none, $color:$primary-color);
+        margin-bottom: 0;
+        padding-left: 8%;
+        font-family: "Yeseva One", serif;
+        font-weight: 700;
+    }
+
+    .our_team--item {
+        @include font_book($font-size: 0.9rem, $line-height: 1.6rem, $transform: none, $color:$hover-color);
+        
+    }
+
+    .our_team--button {
+        @include font_YesevaOne($font-size: 0.8rem, $line-height: 1.6em, $transform: uppercase, $color:$secondary-color);
+        @include button($background: $emphasis-color, $padding: 1rem 1rem);
+        position: relative;
+        top: 1rem;
+        font-family: "Yeseva One", serif;
+        font-weight: 700;
+    }
+    
+    .our_team--description-bottom {
+        width: 50%;
+        @include font_book($font-size: 1.25rem, $line-height: 2.1rem, $transform: none, $color:$primary-color);
+        text-align: center;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
     @media screen and (max-width: $mobile) {
         @include flex ($direction:column);
     }
