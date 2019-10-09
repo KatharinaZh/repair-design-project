@@ -49,7 +49,7 @@
   font-family: "Yeseva One", serif;
 }
 
-.projects--left .projects--grid .projects_example--property, .online_control h4, .types_of_repair h4 {
+.projects--left .projects--grid .projects_example--property, .online_control h4, .types_of_repair h4, .design_project .design_project--caption {
   font-family: "Yeseva One", sans-serif;
   font-size: 1.1rem;
   line-height: 1.6rem;
@@ -895,7 +895,10 @@
   font-weight: 400;
   text-transform: none;
   color: #000000;
-  padding-left: 10%;
+  margin-bottom: 0;
+  padding-left: 8%;
+  font-family: "Yeseva One", serif;
+  font-weight: 700;
 }
 
 .types_of_repair .types_of_repair--item {
@@ -1179,7 +1182,9 @@
 
 .we_realize .we_realize--left {
   width: 40%;
+  height: 100%;
   padding-left: 5%;
+  padding-bottom: 5%;
 }
 
 .we_realize .we_realize--caption {
@@ -1232,13 +1237,15 @@
 }
 
 .we_realize .we_realize--right {
-  width: 60%;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 1fr;
       grid-template-columns: 1fr 1fr;
   -ms-grid-rows: 1fr 1fr;
       grid-template-rows: 1fr 1fr;
+  width: 60%;
+  height: 100%;
+  margin-bottom: -66%;
 }
 
 .we_realize .we_realize--img1 {
@@ -1253,7 +1260,8 @@
 
 .we_realize .we_realize--img3 {
   position: relative;
-  top: -10%;
+  top: -11%;
+  margin-bottom: -10%;
 }
 
 .we_realize .we_realize--img4 {
@@ -1271,7 +1279,31 @@
   }
 }
 
-.design-project {
+.design_project {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #ffffff), color-stop(50%, #000000));
+  background: linear-gradient(to bottom, #ffffff 50%, #000000 50%);
+  padding-top: 10%;
+}
+
+.design_project .design_project--caption {
+  font-family: "Yeseva One", serif;
+  color: #000000;
+}
+
+.design_project .design_project--images {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1279,16 +1311,98 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-top: 2%;
+}
+
+.design_project .design_project--images img {
+  width: 32%;
+}
+
+.design_project .design_project--paragraphs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  position: relative;
+  top: -6rem;
+  width: 100%;
+}
+
+.design_project .design_project--paragraphs-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: left;
+      -ms-flex-align: left;
+          align-items: left;
+  width: 20%;
+  margin: 0 3%;
+  background-color: #ffffff;
+  -webkit-box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03);
+          box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03);
+}
+
+.design_project .heading {
+  font-family: "Yeseva One", sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.6em;
+  font-weight: 400;
+  text-transform: none;
+  color: #000000;
+  margin-bottom: 0;
+  padding-left: 8%;
+  font-family: "Yeseva One", serif;
+  font-weight: 700;
+}
+
+.design_project .design_project--item {
+  font-family: "FuturaBookC", sans-serif;
+  font-size: 0.9rem;
+  line-height: 1.6rem;
+  text-transform: none;
+  color: rgba(152, 152, 152, 0.9);
+}
+
+.design_project .design_project--button {
+  font-family: "Yeseva One", sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.6em;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #ffffff;
+  padding: 1rem 1rem;
+  color: #ffffff;
+  background-color: #E3B873;
+  border: 0;
+  border-radius: 2px;
+  position: relative;
+  top: 1.5rem;
+  width: 63%;
 }
 
 @media screen and (max-width: 375px) {
-  .design-project {
+  .design_project {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
