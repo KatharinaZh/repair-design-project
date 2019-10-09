@@ -114,7 +114,7 @@
                     <nav class="projects--navbar"> 
                         <ul class="projects--list">
                             <li class="projects--item">
-                                <a class="projects--link" href="#">Rostov-on-Don, Admiral</a>
+                                <a class="projects--link projects--link-active" href="#">Rostov-on-Don, Admiral</a>
                             </li>
                             <li class="projects--item">
                                 <a class="projects--link" href="#">Sochi Thieves</a>
@@ -163,7 +163,7 @@
                         <button class="form--button" type="submit">Submit</button>
                     </div>
                     <div class="checkbox">
-                        <input type="checkbox" id="check" checked>
+                        <input type="checkbox" id="check" checked required>
                         <label for="check"> I agree to the processing of personal data</label>
                     </div>
                 </form>
@@ -225,40 +225,73 @@
             </section>      <!-- types_of_repair -->
             
             <section class="advantages">
-                <p></p>
-                <p></p>
-                <p></p>
-                <p></p>
-                <form action="">
-                    <input type="text">
-                    <input type="text">
-                    <input type="text">
-                    <input type="checkbox">
-                    <button></button>
-                </form>
+                <div class="advantages--list">
+                    <p class="advantages--item"></p>
+                    <p class="advantages--item"></p>
+                    <p class="advantages--item"></p>
+                    <p class="advantages--item"></p>
+                </div>
+                <div class="advantages--form">
+                    <form action="#" method="GET" name="form">
+                        <p class="advantages--form-caption">Leave a request for free departure of the measurer</p>
+                        <div class="field">
+                            <label for="name-2">Name</label>
+                            <input id="name-2" required placeholder="What is your name:" type="text">
+                        </div>
+                        <div class="field">
+                            <label for="phone-2">Phone</label>
+                            <input id="phone-2" required placeholder="Your phone number:" type="tel">
+                        </div>
+                        <div class="field">
+                            <label for="email-2">Email</label>
+                            <input id="email-2" required placeholder="Your email" type="email">
+                        </div>
+                        <div class="checkbox">
+                            <input type="checkbox" id="check-2" checked required>
+                            <label for="check-2"> I agree to the processing of personal data</label>
+                        </div>
+                        <button class="form--button" type="submit">Call the measurer</button>
+                    </form>
+                    <div class="advantages--save">
+                        <img class="advantages--save-image" src="./assets/images/save.svg" alt="save">
+                        <p class="advantages--save-p">Help save 10 - 20% of the cost of materials</p>
+                    </div>
+                </div>
             </section>      <!-- advantages -->
 
-            <div class="we_realise">
-                <p></p>
-                <ul>
-                    <li><a href=""></a></li>
-                    <li><a href=""></a></li>
-                    <li><a href=""></a></li>
-                    <li><a href=""></a></li>
-                    <li><a href=""></a></li>
-                    <li><a href=""></a></li>
-                    <li><a href=""></a></li>
-                    <li><a href=""></a></li>
-                    <li><a href=""></a></li>
-                    <li><a href=""></a></li>
-                    <li><a href=""></a></li>
-                </ul>
-                <div class="we_realise--slider"></div>
-                <img src="" alt="">
-                <img src="" alt="">
-                <img src="" alt="">
-                <img src="" alt="">
-            </div>      <!-- we_realise -->
+            <section class="we_realize">
+                <div class="we_realize--left">
+                    <p class="we_realize--caption">We realize your wildest fantasies</p>
+                    <nav class="we_realize--navbar">
+                        <ul class="we_realize--list">
+                            <li class="we_realize--item"><a class="we_realize--link we_realize--link-active" href="" >American classic</a></li>
+                            <li class="we_realize--item"><a class="we_realize--link" href="">Empire</a></li>
+                            <li class="we_realize--item"><a class="we_realize--link" href="">Classical</a></li>
+                            <li class="we_realize--item"><a class="we_realize--link" href="">Loft</a></li>
+                            <li class="we_realize--item"><a class="we_realize--link" href="">Minimalism</a></li>
+                            <li class="we_realize--item"><a class="we_realize--link" href="">Provence</a></li>
+                            <li class="we_realize--item"><a class="we_realize--link" href="">Romanticism</a></li>
+                            <li class="we_realize--item"><a class="we_realize--link" href="">Scandinavian style</a></li>
+                            <li class="we_realize--item"><a class="we_realize--link" href="">Mediterranean style</a></li>
+                            <li class="we_realize--item"><a class="we_realize--link" href="">High tech</a></li>
+                            <li class="we_realize--item"><a class="we_realize--link" href="">Eclecticism</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                
+                <div class="we_realize--right">
+                    <div class="we_realize--slider">
+                        <img src="./assets/images/realize-1.png" alt="realize">
+                        <img src="./assets/images/realize-2.png" alt="realize">
+                        <img src="./assets/images/realize-3.png" alt="realize">
+                        <img src="./assets/images/realize-4.png" alt="realize">
+                    </div>
+                    <img class="we_realize--img1" src="./assets/images/realize-1.png" alt="realize">
+                    <img class="we_realize--img2" src="./assets/images/realize-2.png" alt="realize">
+                    <img class="we_realize--img3" src="./assets/images/realize-3.png" alt="realize">
+                    <img class="we_realize--img4" src="./assets/images/realize-4.png" alt="realize">
+                </div>
+            </section>      <!-- we_realize -->
 
             <div class="design project">
                 <h4>design project</h4>
@@ -352,6 +385,6 @@
             <svg></svg>
         </aside>
         at the beginning of the vieo and at 1.11  -- about svg -->
-    </div>
+    </section>
 </body>
 </html>

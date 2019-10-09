@@ -1,14 +1,22 @@
 @font-face {
     font-family: "FuturaDemiC", sans-serif;
-    src: url('./assets/fonts/futurademic.otf') format("OpenType");
+    src: url('../assets/fonts/futurademic.otf') format("OpenType");
 }
 @font-face {
     font-family: "FuturaBookC", sans-serif;
-    src: url('./assets/fonts/FuturaBookC.ttf') format("TrueType");
+    src: url('../assets/fonts/FuturaBookC.ttf') format("TrueType");
 }
 @font-face {
     font-family: "Yeseva One";
-    src: url('./assets/fonts/YesevaOne.ttf') format("TrueType");
+    src: url('../assets/fonts/YesevaOne.ttf') format("TrueType");
+}
+@font-face {
+    font-family: "FuturaMediumC", sans-serif;
+    src: url('../assets/fonts/FuturaMedium.ttf') format("TrueType");
+}
+@font-face {
+    font-family: "Proxima Nova", sans-serif;
+    src: url('../assets/fonts/ProximaNovaRegular.ttf') format("TrueType");
 }
 
 $desktop: 1440px;
@@ -28,7 +36,7 @@ $padding-general: 5.5%;
     align-items: $align;
 }
 @mixin font_futura_demi($font-size: 0.9rem, $line-height: 1rem, $transform: uppercase, $color:$emphasis-color) {
-    font-family: "FuturaDemiC";
+    font-family: "FuturaDemiC", sans-serif;
     font-size: $font-size;
     line-height: $line-height;
     text-transform: $transform;
@@ -44,13 +52,24 @@ $padding-general: 5.5%;
     color: $color;
 }
 @mixin font_YesevaOne($font-size: 2.5rem, $line-height: 3.3rem, $transform: uppercase, $color:$secondary-color) {
-    font-family: "Yeseva One";
+    font-family: "Yeseva One", sans-serif;
     font-size: $font-size;
     line-height: $line-height;
     font-weight: 400;
     text-transform: $transform;
+    color: $color;  
+}
+@mixin font_futura_medium($font-size: 1.1em, $line-height: 1.56rem, $color:$secondary-color) {
+    font-family: "FuturaMediumC", sans-serif;
+    font-size: $font-size;
+    line-height: $line-height;
     color: $color;
-    
+}
+@mixin font_proxima($font-size: 1.24em, $line-height: 2.1rem, $color:$secondary-color) {
+    font-family: "Proxima Nova", sans-serif;
+    font-size: $font-size;
+    line-height: $line-height;
+    color: $color;
 }
 @mixin button($background: $emphasis-color, $padding: 1rem 2rem) {
     padding: $padding;
@@ -59,6 +78,61 @@ $padding-general: 5.5%;
     border: 0;
     border-radius: 2px;
 
+}
+
+@mixin checkbox () {
+    input[type="checkbox"]:checked, 
+    input[type="checkbox"]:not(:checked), 
+    {
+        display: none;
+    }
+
+    input[type="checkbox"]:checked + label, 
+    input[type="checkbox"]:not(:checked) + label {
+        display: inline-block;
+        position: relative;
+        padding-left: 2rem;
+        cursor: pointer;
+    }
+
+    input[type="checkbox"]:checked + label:before, 
+    input[type="checkbox"]:not(:checked) + label:before {
+        content: "";
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        width: 18px;
+        height: 18px;
+        border: 1px solid transparent;
+        background-color: $emphasis-color;
+    }
+
+    input[type="checkbox"]:checked + label:after, 
+    input[type="checkbox"]:not(:checked) + label:after {
+        content: "";
+        position: absolute;
+        transition: all 0.2s ease;
+    }
+
+    input[type="checkbox"]:checked + label:after, 
+    input[type="checkbox"]:not(:checked) + label:after {
+        left: 3px;
+        top: 4px;
+        width: 10px;
+        height: 5px;
+        border-radius: 1px;
+        border-left: 4px solid $secondary-color;
+        border-bottom: 4px solid $secondary-color;
+        transform: rotate(-45deg);
+    }
+
+    input[type="checkbox"]:not(:checked) + label:after {
+        opacity: 0;
+    }
+
+    input[type="checkbox"]:checked + label:after {
+        opacity: 1;
+    }
 }
 
 %links {
@@ -73,6 +147,10 @@ $padding-general: 5.5%;
 %background {
     // width: 100%;
     background-size: cover;
+    background-repeat: no-repeat;
+    // background-origin: padding-box;
+
+
 }
 %mobile-none {
     @media screen and (max-width: $mobile) {
@@ -82,7 +160,10 @@ $padding-general: 5.5%;
 
 %h3 {
     @include font_YesevaOne($font-size: 1.69rem, $line-height: 2.3rem, $transform: uppercase, $color:$emphasis-color);
+    font-family: "Yeseva One", serif;
 }
 %h4 {
     @include font_YesevaOne($font-size: 1.1rem, $line-height: 1.6rem, $transform: uppercase, $color:$emphasis-color);
+    font-family: "Yeseva One", serif;
+    font-weight: 700;
 }
