@@ -191,17 +191,22 @@
     width: 35%;
     
     .projects_example {
+        margin-top: 10%;
         text-align: left;
     }
 
     .projects_example--caption {
         @extend %h3;
+        display: inline-block;
         font-weight: 700;
-        margin: 11% 0 0 0;
+        // margin: 11% 0 0 0;
+        margin: 0;
+        width: 40%;
     }
 
     .projects--vector {
-        text-align: center;
+        display: inline-flex;
+        vertical-align: middle;
     }
 
     .projects_example--description {
@@ -252,8 +257,8 @@
 
 .projects--right {
     width: 65%;
-    position: relative;
-    z-index: 1;
+    // position: relative;
+    // z-index: 1;
 
     .projects--navbar {
         @include flex($align: left);
@@ -720,9 +725,126 @@
 }
 
 .how_work {
+        @include flex($align:left, $justify:space-between, $direction: row);
+        width: 94%;
+        padding: 0 0 4% $padding-general;
+        background-color: $primary-color;
     
-    @extend %mobile-none;
+    .how_work--left {
+        position: relative;
+        top: -7rem;
+        width: 35%;
+        text-align: left;
+        
+        .how--caption {
+            @include font_futura_demi($font-size: 0.9rem, $line-height: 1.3rem, $transform: uppercase, $color:$secondary-color);
+        }
 
+        .how_work--caption {
+            @extend %h3;
+            display: inline-block;
+            font-weight: 700;
+            margin: 0;
+            margin-bottom: 20%;
+            width: 40%;
+        }
+    
+        .how_work--vector {
+            display: inline-flex;
+            vertical-align: middle;
+        }
+
+        .how_work--count {
+            @include font_YesevaOne($font-size: 1.1rem, $line-height: 1.56rem, $transform: uppercase, $color:$secondary-color);
+            font-family: "Yeseva One", serif;
+            font-weight: 700;
+        }
+        
+        .how_work--property {
+            @extend %h4;
+        }
+
+        .how_work--property_description {
+            @include font_book($font-size: 0.94rem, $line-height: 1.5rem, $transform: none, $color:$secondary-color);
+            width: 80%;
+        }
+    
+    
+        .slider--arrows {
+            @include flex($justify:space-evenly, $direction: row);
+            position: relative;
+            top: 100px;
+            align-items: center;
+            width: 80%; 
+            margin-top: 10%;
+            padding-left: 0;
+            list-style: none;
+    
+            .button_arrow {
+                border: solid 1px transparent;
+                background-color: transparent;
+                cursor: pointer;
+                // &:hover { 
+                // }
+            }
+            
+            .button_cicrle {
+                border: 0;
+                border-radius: 50%;
+                height: 10px;
+                background-color: rgba(255, 255, 255, 0.3);
+                
+                cursor: pointer;
+                &:hover {
+                    background-color: rgba(255, 255, 255, 0.9);
+                }
+            }
+        }   
+    }
+    
+    .how_work--right {
+        width: 65%;
+    
+        .how_work--grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            
+            .how_work--right-property {
+                @extend %h4;
+                margin-bottom: 0;
+                color: $hover-color;
+
+                &::after {
+                    content: "";
+                    display: block;
+                    width: 1.2rem;
+                    border-bottom: solid 2px darken($color: $emphasis-color, $amount: 30);
+                }
+                &-active {
+                    color: $secondary-color;
+                    &::after {
+                        content: "";
+                        display: block;
+                        width: 1.2rem;
+                        border-bottom: solid 2px $emphasis-color;
+                    }
+                }
+                
+            }
+            
+            .how_work--right-property_description {
+                @include font_book($font-size: 0.94rem, $line-height: 1.25rem, $transform: none, $color:$hover-color);
+                width: 44%;
+                &-active {
+                    color: $secondary-color;
+                }
+                
+            }
+            
+        }
+    }    
+    @extend %mobile-none;
 }
 
 .our_team {
