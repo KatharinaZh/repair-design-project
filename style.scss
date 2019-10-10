@@ -1,8 +1,10 @@
 @import "scss/variables";
 
 .wrapper {
-    background-color: $primary-color;
+    width: 1440px;
     height: 100%;
+    margin: 0 auto;
+    background-color: $primary-color;
 }
 
 .header {
@@ -122,7 +124,7 @@
     .banner--scroll_down {
         position: absolute;
         top: 94%;
-        left: -6%;        
+        left: -5%;        
         
         .button {
             @include flex($align:center, $justify:space-between, $direction: row);
@@ -955,7 +957,7 @@
 .our_clients {
     @include flex($align:center, $justify:space-between, $direction: column);
     background: $secondary-color;
-    padding: 10% $padding-general 10%;
+    padding: 10% $padding-general 30%;
     
     .our_clients--caption {
         @extend %h4;
@@ -1029,87 +1031,177 @@
 
 
 
+.contacts {
+    background-image: url('./assets/images/background-contact.png');
+    background: linear-gradient(180deg, rgba(24, 24, 24, 0.9) 3.47%, rgba(24, 24, 24, 0.72) 100%);
+    background-position-x: right;
+    background-size: contain; 
+    background-repeat: no-repeat    ;
+    @extend %background;
 
-
-.questions {
-    background: linear-gradient(to bottom, $secondary-color 43%, $primary-color 43%);
-
-    .questions--form {
+    .questions {
+        position: relative;
+        top: -13rem;
         width: 40%;
         margin: 0 auto;
-        padding: 0 10% 5%;
-        border: 0;
-        background-color: $primary-color;
-        @include flex($align:center, $justify:space-between, $direction: column);
-        @include font_book($font-size: 1.1rem, $line-height: 1.5rem, $transform: none, $color:$primary-color); 
-        .questions--caption {
-            margin: 4%;
-            @extend %h4;
-            font-family: "Yeseva One", serif;
-            color: $secondary-color;
-        }
-        .fieldgroup {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-        }
-        .field {
-            display: flex;
-            flex-direction: column;
-            margin-bottom: 8%;
+        margin-bottom: -13rem;
+        background: transparent;
 
-            label {
-                @include font_book($font-size: 0.9rem, $line-height: 1.25rem, $transform: none, $color:$hover-color);
+        .questions--form {
+            padding: 0 10% 5%;
+            border: 0;
+            background-color: $primary-color;
+            @include flex($align:center, $justify:space-between, $direction: column);
+            @include font_book($font-size: 1.1rem, $line-height: 1.5rem, $transform: none, $color:$primary-color); 
+            .questions--caption {
+                margin: 4%;
+                @extend %h4;
+                font-family: "Yeseva One", serif;
+                color: $secondary-color;
+            }
+            .fieldgroup {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+            }
+            .field {
+                display: flex;
+                flex-direction: column;
+                margin-bottom: 8%;
+
+                label {
+                    @include font_book($font-size: 0.9rem, $line-height: 1.25rem, $transform: none, $color:$hover-color);
+                }
+            }
+
+            input {
+                color: $secondary-color;
+                background-color: $primary-color;
+                border: 0;
+                border-bottom: solid 1px $hover-color;
+                @include font_futura_demi($font-size: 1.1rem, $line-height: 1.56rem, $transform: none, $color:$secondary-color);
+                
+                // &[placeholder] {
+                //     color: $secondary-color;
+                // }
+            }
+        
+            
+        
+            .checkbox {
+                color: $secondary-color;
+                margin-bottom: 10%;
+                @include checkbox();
+            }
+            .form--button {
+                width: 50%;
+                margin: 3% 5%;
+                @include button($background: $emphasis-color, $padding: 1rem 1rem);
+                @include font_futura_demi($font-size: 0.9rem, $line-height: 1.6rem, $transform: uppercase, $color:$secondary-color);
+            }
+            @media screen and (max-width: $mobile) {
+                width: 100%;
+                @include flex ($direction:column);
             }
         }
 
-        input {
-            color: $secondary-color;
-            background-color: $primary-color;
-            border: 0;
-            border-bottom: solid 1px $hover-color;
-            @include font_futura_demi($font-size: 1.1rem, $line-height: 1.56rem, $transform: none, $color:$secondary-color);
-            
-            // &[placeholder] {
-            //     color: $secondary-color;
-            // }
-        }
-    
-        
-    
-        .checkbox {
-            color: $secondary-color;
-            margin-bottom: 10%;
-            @include checkbox();
-        }
-        .form--button {
-            width: 50%;
-            margin: 3% 5%;
-            @include button($background: $emphasis-color, $padding: 1rem 1rem);
-            @include font_futura_demi($font-size: 0.9rem, $line-height: 1.6rem, $transform: uppercase, $color:$secondary-color);
-        }
         @media screen and (max-width: $mobile) {
-            width: 100%;
             @include flex ($direction:column);
         }
     }
 
-    @media screen and (max-width: $mobile) {
-        @include flex ($direction:column);
+    .contacts--caption {
+        text-align: center;
+        width: 37%; 
+        margin: 4% auto;
+        @extend %h4;
+        font-family: "Yeseva One", serif;
+        color: $emphasis-color;
+    }
+
+    .contacts--social_btns {
+        @include flex($align:center, $justify:center, $direction: row);
+        margin: 4% auto;
+    }
+    .contacts--social_link {
+        @extend %links;
+    }
+    
+
+    .map {
+        display: flex;
+        -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+        filter: grayscale(100%);
+        .map--iframe {
+            align-self: center;
+            width: 80%;
+            margin: 0 auto 15%;
+        }
+
+
+        @media screen and (max-width: $mobile) {
+            width: 100%;
+        }
+    
     }
 }
 
 
 
+.footer {
 
-.map {
+    padding: 0 $padding-general;
+    height: 82px;
+    @include flex();
+
     @media screen and (max-width: $mobile) {
         width: 100%;
     }
 
-}
+    .logo--link {
+        @extend %links;
+        @include font_futura_demi();
+        color: $emphasis-color;
+    }
 
-.footer {
+    .navbar--list {
+        list-style-type: none;
+        @include flex($align: center);
+        @extend %mobile-none;
+    }
+
+    .navbar--item {
+        width: calc(100% / 7);
+        margin: 0 1rem;
+    }
+
+    .navbar--link {
+        display: flex;
+        justify-content: center;
+        letter-spacing: 1px;
+        @extend %links;
+        @include font_book();
+
+        &:hover {
+            color: lighten($emphasis-color, 10%);
+        }
+
+        &:active {
+            color: $emphasis-color;
+        }
+    }
+
+    .tel--link {
+        @extend %links;
+        @include font_futura_demi();
+    }
+
+    .header--button {
+        .button {    
+            @include font_futura_demi();
+            @include button(); 
+        }
+    }
     @extend %mobile-none;
 }
 

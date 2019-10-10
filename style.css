@@ -23,18 +23,18 @@
   src: url("../assets/fonts/ProximaNovaRegular.ttf") format("TrueType");
 }
 
-.logo--link, .navbar--link, .tel--link, .banner .sidebar p a, .projects--right .projects--navbar .projects--link, .we_realize .we_realize--navbar .we_realize--link {
+.logo--link, .navbar--link, .tel--link, .banner .sidebar p a, .projects--right .projects--navbar .projects--link, .we_realize .we_realize--navbar .we_realize--link, .contacts .contacts--social_link, .footer .logo--link, .footer .navbar--link, .footer .tel--link {
   text-decoration: none;
   color: #ffffff;
 }
 
-.banner, .advantages .advantages--list {
+.banner, .advantages .advantages--list, .contacts {
   background-size: cover;
   background-repeat: no-repeat;
 }
 
 @media screen and (max-width: 375px) {
-  .navbar--list, .projects--right .projects--navbar, .advantages, .we_realize .we_realize--navbar, .how_work, .our_team p:last-child, .our_clients, .footer {
+  .navbar--list, .projects--right .projects--navbar, .advantages, .we_realize .we_realize--navbar, .how_work, .our_team p:last-child, .our_clients, .footer .navbar--list, .footer {
     display: none;
   }
 }
@@ -49,7 +49,7 @@
   font-family: "Yeseva One", serif;
 }
 
-.projects--left .projects--grid .projects_example--property, .online_control h4, .types_of_repair h4, .design_project .design_project--caption, .how_work .how_work--left .how_work--property, .how_work .how_work--right .how_work--grid .how_work--right-property, .our_team .our_team--caption, .our_clients .our_clients--caption, .questions .questions--form .questions--caption {
+.projects--left .projects--grid .projects_example--property, .online_control h4, .types_of_repair h4, .design_project .design_project--caption, .how_work .how_work--left .how_work--property, .how_work .how_work--right .how_work--grid .how_work--right-property, .our_team .our_team--caption, .our_clients .our_clients--caption, .contacts .questions .questions--form .questions--caption, .contacts .contacts--caption {
   font-family: "Yeseva One", sans-serif;
   font-size: 1.1rem;
   line-height: 1.6rem;
@@ -61,8 +61,10 @@
 }
 
 .wrapper {
-  background-color: #000000;
+  width: 1440px;
   height: 100%;
+  margin: 0 auto;
+  background-color: #000000;
 }
 
 .header {
@@ -260,7 +262,7 @@
 .banner .banner--scroll_down {
   position: absolute;
   top: 94%;
-  left: -6%;
+  left: -5%;
 }
 
 .banner .banner--scroll_down .button {
@@ -1795,7 +1797,7 @@
       -ms-flex-align: center;
           align-items: center;
   background: #ffffff;
-  padding: 10% 5.5% 10%;
+  padding: 10% 5.5% 30%;
 }
 
 .our_clients .our_clients--caption {
@@ -1945,14 +1947,25 @@
           align-items: center;
 }
 
-.questions {
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(43%, #ffffff), color-stop(43%, #000000));
-  background: linear-gradient(to bottom, #ffffff 43%, #000000 43%);
+.contacts {
+  background-image: url("./assets/images/background-contact.png");
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(3.47%, rgba(24, 24, 24, 0.9)), to(rgba(24, 24, 24, 0.72)));
+  background: linear-gradient(180deg, rgba(24, 24, 24, 0.9) 3.47%, rgba(24, 24, 24, 0.72) 100%);
+  background-position-x: right;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
-.questions .questions--form {
+.contacts .questions {
+  position: relative;
+  top: -13rem;
   width: 40%;
   margin: 0 auto;
+  margin-bottom: -13rem;
+  background: transparent;
+}
+
+.contacts .questions .questions--form {
   padding: 0 10% 5%;
   border: 0;
   background-color: #000000;
@@ -1976,13 +1989,13 @@
   color: #000000;
 }
 
-.questions .questions--form .questions--caption {
+.contacts .questions .questions--form .questions--caption {
   margin: 4%;
   font-family: "Yeseva One", serif;
   color: #ffffff;
 }
 
-.questions .questions--form .fieldgroup {
+.contacts .questions .questions--form .fieldgroup {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1995,7 +2008,7 @@
           justify-content: space-between;
 }
 
-.questions .questions--form .field {
+.contacts .questions .questions--form .field {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2006,7 +2019,7 @@
   margin-bottom: 8%;
 }
 
-.questions .questions--form .field label {
+.contacts .questions .questions--form .field label {
   font-family: "FuturaBookC", sans-serif;
   font-size: 0.9rem;
   line-height: 1.25rem;
@@ -2014,7 +2027,7 @@
   color: rgba(152, 152, 152, 0.9);
 }
 
-.questions .questions--form input {
+.contacts .questions .questions--form input {
   color: #ffffff;
   background-color: #000000;
   border: 0;
@@ -2027,26 +2040,26 @@
   font-weight: bold;
 }
 
-.questions .questions--form .checkbox {
+.contacts .questions .questions--form .checkbox {
   color: #ffffff;
   margin-bottom: 10%;
 }
 
-.questions .questions--form .checkbox input[type="checkbox"]:checked,
-.questions .questions--form .checkbox input[type="checkbox"]:not(:checked) {
+.contacts .questions .questions--form .checkbox input[type="checkbox"]:checked,
+.contacts .questions .questions--form .checkbox input[type="checkbox"]:not(:checked) {
   display: none;
 }
 
-.questions .questions--form .checkbox input[type="checkbox"]:checked + label,
-.questions .questions--form .checkbox input[type="checkbox"]:not(:checked) + label {
+.contacts .questions .questions--form .checkbox input[type="checkbox"]:checked + label,
+.contacts .questions .questions--form .checkbox input[type="checkbox"]:not(:checked) + label {
   display: inline-block;
   position: relative;
   padding-left: 2rem;
   cursor: pointer;
 }
 
-.questions .questions--form .checkbox input[type="checkbox"]:checked + label:before,
-.questions .questions--form .checkbox input[type="checkbox"]:not(:checked) + label:before {
+.contacts .questions .questions--form .checkbox input[type="checkbox"]:checked + label:before,
+.contacts .questions .questions--form .checkbox input[type="checkbox"]:not(:checked) + label:before {
   content: "";
   position: absolute;
   left: 0px;
@@ -2057,16 +2070,16 @@
   background-color: #E3B873;
 }
 
-.questions .questions--form .checkbox input[type="checkbox"]:checked + label:after,
-.questions .questions--form .checkbox input[type="checkbox"]:not(:checked) + label:after {
+.contacts .questions .questions--form .checkbox input[type="checkbox"]:checked + label:after,
+.contacts .questions .questions--form .checkbox input[type="checkbox"]:not(:checked) + label:after {
   content: "";
   position: absolute;
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
 
-.questions .questions--form .checkbox input[type="checkbox"]:checked + label:after,
-.questions .questions--form .checkbox input[type="checkbox"]:not(:checked) + label:after {
+.contacts .questions .questions--form .checkbox input[type="checkbox"]:checked + label:after,
+.contacts .questions .questions--form .checkbox input[type="checkbox"]:not(:checked) + label:after {
   left: 3px;
   top: 4px;
   width: 10px;
@@ -2078,15 +2091,15 @@
           transform: rotate(-45deg);
 }
 
-.questions .questions--form .checkbox input[type="checkbox"]:not(:checked) + label:after {
+.contacts .questions .questions--form .checkbox input[type="checkbox"]:not(:checked) + label:after {
   opacity: 0;
 }
 
-.questions .questions--form .checkbox input[type="checkbox"]:checked + label:after {
+.contacts .questions .questions--form .checkbox input[type="checkbox"]:checked + label:after {
   opacity: 1;
 }
 
-.questions .questions--form .form--button {
+.contacts .questions .questions--form .form--button {
   width: 50%;
   margin: 3% 5%;
   padding: 1rem 1rem;
@@ -2103,7 +2116,7 @@
 }
 
 @media screen and (max-width: 375px) {
-  .questions .questions--form {
+  .contacts .questions .questions--form {
     width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -2122,7 +2135,7 @@
 }
 
 @media screen and (max-width: 375px) {
-  .questions {
+  .contacts .questions {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -2139,9 +2152,153 @@
   }
 }
 
+.contacts .contacts--caption {
+  text-align: center;
+  width: 37%;
+  margin: 4% auto;
+  font-family: "Yeseva One", serif;
+  color: #E3B873;
+}
+
+.contacts .contacts--social_btns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 4% auto;
+}
+
+.contacts .map {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-filter: grayscale(100%);
+  /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%);
+}
+
+.contacts .map .map--iframe {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  width: 80%;
+  margin: 0 auto 15%;
+}
+
 @media screen and (max-width: 375px) {
-  .map {
+  .contacts .map {
     width: 100%;
   }
+}
+
+.footer {
+  padding: 0 5.5%;
+  height: 82px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media screen and (max-width: 375px) {
+  .footer {
+    width: 100%;
+  }
+}
+
+.footer .logo--link {
+  font-family: "FuturaDemiC", sans-serif;
+  font-size: 0.9rem;
+  line-height: 1rem;
+  text-transform: uppercase;
+  color: #E3B873;
+  font-weight: bold;
+  color: #E3B873;
+}
+
+.footer .navbar--list {
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer .navbar--item {
+  width: calc(100% / 7);
+  margin: 0 1rem;
+}
+
+.footer .navbar--link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  letter-spacing: 1px;
+  font-family: "FuturaBookC", sans-serif;
+  font-size: 0.9rem;
+  line-height: 1rem;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.footer .navbar--link:hover {
+  color: #ecce9e;
+}
+
+.footer .navbar--link:active {
+  color: #E3B873;
+}
+
+.footer .tel--link {
+  font-family: "FuturaDemiC", sans-serif;
+  font-size: 0.9rem;
+  line-height: 1rem;
+  text-transform: uppercase;
+  color: #E3B873;
+  font-weight: bold;
+}
+
+.footer .header--button .button {
+  font-family: "FuturaDemiC", sans-serif;
+  font-size: 0.9rem;
+  line-height: 1rem;
+  text-transform: uppercase;
+  color: #E3B873;
+  font-weight: bold;
+  padding: 1rem 2rem;
+  color: #ffffff;
+  background-color: #E3B873;
+  border: 0;
+  border-radius: 2px;
 }
 /*# sourceMappingURL=style.css.map */
