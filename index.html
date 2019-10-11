@@ -11,29 +11,29 @@
 </head>
 <body>
     <div class="wrapper">
-        <header class="header">
+        <header class="header" id="home">
             <div class="logo">
                 <a class="logo--link" href="./index.html">IC "Repair Design Project"</a>
             </div>
             <nav class="navbar">
                 <ul class="navbar--list">
                     <li class="navbar--item">
-                        <a class="navbar--link" href="#">Home</a>
+                        <a class="navbar--link navbar--link-active" href="#home">Home</a>
                     </li>
                     <li class="navbar--item">
-                        <a class="navbar--link" href="#">Projects</a>
+                        <a class="navbar--link" href="#projects">Projects</a>
                     </li>
                     <li class="navbar--item">
-                        <a class="navbar--link" href="#">Measurement</a>
+                        <a class="navbar--link" href="#advantages">Measurement</a>
                     </li>
                     <li class="navbar--item">
-                        <a class="navbar--link" href="#">Team</a>
+                        <a class="navbar--link" href="#team">Team</a>
                     </li>
                     <li class="navbar--item">
-                        <a class="navbar--link" href="#">Reviews</a>
+                        <a class="navbar--link" href="#clients">Reviews</a>
                     </li>
                     <li class="navbar--item">
-                        <a class="navbar--link" href="#">Contacts</a>
+                        <a class="navbar--link" href="#contacts">Contacts</a>
                     </li>
                 </ul>
             </nav>
@@ -58,7 +58,7 @@
                     <button class="banner--button banner--button-transparent">submit your application</button>
                 </div>
                 <div class="banner--scroll_down">
-                    <button class="button"><p>scroll down</p> <img src="./assets/images/scroll.svg" alt="scroll down"></button>
+                    <a class="button" href="#footer"><p>scroll down</p> <img src="./assets/images/scroll.svg" alt="scroll down"></a>
                 </div>
 
                 <div class="sidebar">
@@ -72,7 +72,7 @@
 
 
 
-            <section class="projects">
+            <section class="projects" id="projects">
                 <div class="projects--left">
                     <div class="projects_example">
                         <h3 class="projects_example--caption">Completed projects</h3>
@@ -99,13 +99,13 @@
                                 <p class="projects_example--property_description">Upon request</p>
                             </div>
                         </div>
-                        <ul class="slider--arrows">
-                            <li><button class="button button_arrow"><img src="./assets/images/slider-left.svg" alt=""></button></li>
-                            <li><button class="button button_cicrle"></button></li>
-                            <li><button class="button button_cicrle"></button></li>
-                            <li><button class="button button_cicrle"></button></li>
-                            <li><button class="button button_arrow"><img src="./assets/images/slider-right.svg" alt=""></button></li>
-                        </ul>
+                        <div class="slider--arrows">
+                            <div class="button button_arrow"><img src="./assets/images/slider-left.svg" alt="left"></div>
+                            <div class="button button_cicrle button_cicrle-active"></div>
+                            <div class="button button_cicrle"></div>
+                            <div class="button button_cicrle"></div>
+                            <div class="button button_arrow"><img src="./assets/images/slider-right.svg" alt="right"></div>
+                        </div>
                     </div>
                 </div>              <!-- projects--left -->
 
@@ -126,13 +126,13 @@
                     </nav>
                     
                     <div class="slider">
-                        <img class="slider--image" src="./assets/images/slider-image-1.png" alt="" >
-                        <img class="slider--image" src="./assets/images/slider-image-2.png" alt="" >                    
+                        <img class="slider--image" src="./assets/images/slider-image-1.jpg" alt="image 1" >
+                        <img class="slider--image" src="./assets/images/slider-image-2.jpg" alt="image 2" >
                         <div class="slider--button">
                             <button class="slider--button-button"><img src="./assets/images/right.svg" alt="right button"> </button>
                         </div>
                     </div>
-                </div>   <!-- projects--right -->
+                </div>       <!-- projects--right -->
                 
             </section>              <!-- projects -->
 
@@ -140,7 +140,7 @@
 
             <section class="online_control">
                 <h4>online control</h4>
-                <img class="watch" src="./assets/images/online-control.svg" alt="online-control">
+                <img class="online_control--image" src="./assets/images/online-control.svg" alt="online-control">
                 <iframe class="online_control--video" width="560" height="315" src="https://www.youtube.com/embed/jz2zhmMDaJg" frameborder="0" 
                 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 <img class="vector" src="./assets/images/vector-hor.svg" alt="vector">
@@ -224,8 +224,9 @@
                 </div>    
             </section>      <!-- types_of_repair -->
             
-            <section class="advantages">
+            <section class="advantages" id="advantages">
                 <div class="advantages--list">
+                    <div class="advantages--circle"></div>
                     <p class="advantages--item"></p>
                     <p class="advantages--item"></p>
                     <p class="advantages--item"></p>
@@ -264,17 +265,17 @@
                     <p class="we_realize--caption">We realize your wildest fantasies</p>
                     <nav class="we_realize--navbar">
                         <ul class="we_realize--list">
-                            <li class="we_realize--item"><a class="we_realize--link we_realize--link-active" href="" >American classic</a></li>
-                            <li class="we_realize--item"><a class="we_realize--link" href="">Empire</a></li>
-                            <li class="we_realize--item"><a class="we_realize--link" href="">Classical</a></li>
-                            <li class="we_realize--item"><a class="we_realize--link" href="">Loft</a></li>
-                            <li class="we_realize--item"><a class="we_realize--link" href="">Minimalism</a></li>
-                            <li class="we_realize--item"><a class="we_realize--link" href="">Provence</a></li>
-                            <li class="we_realize--item"><a class="we_realize--link" href="">Romanticism</a></li>
-                            <li class="we_realize--item"><a class="we_realize--link" href="">Scandinavian style</a></li>
-                            <li class="we_realize--item"><a class="we_realize--link" href="">Mediterranean style</a></li>
-                            <li class="we_realize--item"><a class="we_realize--link" href="">High tech</a></li>
-                            <li class="we_realize--item"><a class="we_realize--link" href="">Eclecticism</a></li>
+                            <li class="we_realize--item"><a class="we_realize--link we_realize--link-active" href="#" >American classic</a></li>
+                            <li class="we_realize--item"><a class="we_realize--link" href="#">Empire</a></li>
+                            <li class="we_realize--item"><a class="we_realize--link" href="#">Classical</a></li>
+                            <li class="we_realize--item"><a class="we_realize--link" href="#">Loft</a></li>
+                            <li class="we_realize--item"><a class="we_realize--link" href="#">Minimalism</a></li>
+                            <li class="we_realize--item"><a class="we_realize--link" href="#">Provence</a></li>
+                            <li class="we_realize--item"><a class="we_realize--link" href="#">Romanticism</a></li>
+                            <li class="we_realize--item"><a class="we_realize--link" href="#">Scandinavian style</a></li>
+                            <li class="we_realize--item"><a class="we_realize--link" href="#">Mediterranean style</a></li>
+                            <li class="we_realize--item"><a class="we_realize--link" href="#">High tech</a></li>
+                            <li class="we_realize--item"><a class="we_realize--link" href="#">Eclecticism</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -371,18 +372,14 @@
                             as a whole and its individual stages.</p>
 
                     <div class="slider--arrows">
-                        <div class="button button_arrow">
-                            <img src="./assets/images/slider-left.svg" alt="">
-                        </div>
-                        <div><button class="button button_cicrle"></button></div>
-                        <div><button class="button button_cicrle"></button></div>
-                        <div><button class="button button_cicrle"></button></div>
-                        <div><button class="button button_cicrle"></button></div>
-                        <div><button class="button button_cicrle"></button></div>
-                        <div><button class="button button_cicrle"></button></div>
-                        <div class="button button_arrow">
-                            <img src="./assets/images/slider-right.svg" alt="">
-                        </div>
+                        <div class="button button_arrow"><img src="./assets/images/slider-left.svg" alt="left"></div>
+                        <div class="button button_cicrle button_cicrle-active"></div>
+                        <div class="button button_cicrle"></div>
+                        <div class="button button_cicrle"></div>
+                        <div class="button button_cicrle"></div>
+                        <div class="button button_cicrle"></div>
+                        <div class="button button_cicrle"></div>
+                        <div class="button button_arrow"><img src="./assets/images/slider-right.svg" alt="right"></div>
                     </div>
                 </div>              <!-- how_work--left -->
 
@@ -413,13 +410,13 @@
                             <p class="how_work--right-property_description">Приемка-сдача работ</p>
                         </div>
                     </div>
-                    <img class="slider--image" src="./assets/images/how-work.png" alt="" >
+                    <img class="slider--image" src="./assets/images/how-work.png" alt="how we are working" >
                 </div>   <!-- how_work--right -->
 
             </section>         <!-- how_work -->
 
 
-            <section class="our_team">
+            <section class="our_team" id="team">
                 <h4 class="our_team--caption">our team</h4>
                 <img src="./assets/images/team.svg" alt="design project">
                 <p class="our_team--description-top">Our team has helped to become happier for more than
@@ -427,16 +424,16 @@
                 <div class="our_team--images">
                     <div class="images_group">
                         <img src="./assets/images/team-1.png" alt="design">
-                        <img src="./assets/images/team-11.svg" alt="" class="our_team--icon">
+                        <img src="./assets/images/team-11.svg" alt="our team" class="our_team--icon">
                     </div>
                     <div class="images_group">
                         <img src="./assets/images/team-2.png" alt="design">
-                        <img src="./assets/images/team-12.svg" alt="" class="our_team--icon">
+                        <img src="./assets/images/team-12.svg" alt="our team" class="our_team--icon">
                     </div>
                     
                     <div class="images_group">
                         <img src="./assets/images/team-3.png" alt="design">
-                        <img src="./assets/images/team-13.svg" alt="" class="our_team--icon">
+                        <img src="./assets/images/team-13.svg" alt="our team" class="our_team--icon">
                     </div>
                 </div>
                 
@@ -467,7 +464,7 @@
 
 
             
-            <section class="our_clients">
+            <section class="our_clients" id="clients">
                 <h4 class="our_clients--caption">our clients</h4>
                 <img src="./assets/images/clients.svg" alt="design project">
                 <p class="our_clients--description">80% of our customers recommend us to their
@@ -477,37 +474,43 @@
                         <div class="our_clients--paragraphs">
                             <div class="our_clients--paragraphs-item">
                                 <div class="our_clients--group">
-                                    <img src="./assets/images/client-1.png" alt="partrait" class="client_portrait">
+                                    <img src="./assets/images/client-1.png" alt="portrait" class="client_portrait">
                                     <p class="heading">Fedosova Maria Konstantinovna</p>
                                 </div>
-                                <p class="our_clients--comment">I want to thank the guys for their
-                                     work. WE PUT YOUR SHOWER PART IN REPAIR. I am VERY grateful 
-                                     that I referred to the repair as to my own. GREAT THANKS I 
-                                     EXPRESS THE PROJECT TO GEORGIA FOR ITS PROFESSIONALISM AND APPROACH. 
-                                     THE REPAIR PROCESS WAS TURNED OUT IN TERMS, FASTER THAN ANTICIPATED.
-                                     TEAM MOBILE AND PROFESSIONAL. WORKS PERFORMED QUALITATIVELY WITHOUT COMMENTS. 
-                                     QUALITY SATISFIED. PRICES DEMOCRATIC. I RECOMMEND THESE MASTERS.</p>
+                                <p class="our_clients--comment">I want to thank the guys for their work. We put your shower part in repair.
+                                        I am very grateful that i referred to the repair as to my own. 
+                                        Great thanks i express the project to georgia for its professionalism 
+                                        and approach. The repair process was turned out in terms,
+                                         faster than anticipated. Team mobile and professional. 
+                                         Works performed qualitatively without comments. Quality satisfied.
+                                          Prices democratic. I recommend these masters.</p>
                                 <div class="our_clients--button_group">
-                                    <div class="our_clients--button our_clients--group"><img src="./assets/images/meter.svg" alt="meter"><p>40 m2</p> </div>
-                                    <div class="our_clients--button our_clients--group"><img src="./assets/images/days.svg" alt="days"><p>48 days</p> </div>
+                                    <div class="our_clients--button ">
+                                        <img src="./assets/images/meter.svg" alt="meter">
+                                        <p>40 m2</p>
+                                    </div>
+                                    <div class="our_clients--button ">
+                                        <img src="./assets/images/days.svg" alt="days">
+                                        <p>48 days</p>
+                                    </div>
                                 </div>
                             </div>
         
                             <div class="our_clients--paragraphs-item">
                                 <div class="our_clients--group">
-                                    <img src="./assets/images/client-2.png" alt="partrait" class="client_portrait">
+                                    <img src="./assets/images/client-2.png" alt="portrait" class="client_portrait">
                                     <p class="heading">Afanasyev Sergey Alexandrovich</p>
                                 </div>
-                                <p class="our_clients--comment">I want to thank the guys for their
-                                        work. WE PUT YOUR SHOWER PART IN REPAIR. I am VERY grateful 
-                                        that I referred to the repair as to my own. GREAT THANKS I 
-                                        EXPRESS THE PROJECT TO GEORGIA FOR ITS PROFESSIONALISM AND APPROACH. 
-                                        THE REPAIR PROCESS WAS TURNED OUT IN TERMS, FASTER THAN ANTICIPATED.
-                                        TEAM MOBILE AND PROFESSIONAL. WORKS PERFORMED QUALITATIVELY WITHOUT COMMENTS. 
-                                        QUALITY SATISFIED. PRICES DEMOCRATIC. I RECOMMEND THESE MASTERS.</p>
+                                <p class="our_clients--comment">I want to thank the guys for their work. We put your shower part in repair.
+                                     I am very grateful that i referred to the repair as to my own. 
+                                     Great thanks i express the project to georgia for its professionalism 
+                                     and approach. The repair process was turned out in terms,
+                                      faster than anticipated. Team mobile and professional. 
+                                      Works performed qualitatively without comments. Quality satisfied.
+                                       Prices democratic. I recommend these masters.</p>
                                 <div class="our_clients--button_group">
-                                    <div class="our_clients--button our_clients--group"><img src="./assets/images/meter.svg" alt="meter"><p>40 m2</p> </div>
-                                    <div class="our_clients--button our_clients--group"><img src="./assets/images/days.svg" alt="days"><p>48 days</p> </div>
+                                    <div class="our_clients--button"><img src="./assets/images/meter.svg" alt="meter"><p>40 m2</p> </div>
+                                    <div class="our_clients--button"><img src="./assets/images/days.svg" alt="days"><p>48 days</p> </div>
                                 </div>
                             </div>
                             <div class="our_clients--paragraphs-item">
@@ -515,23 +518,23 @@
                                     <img src="./assets/images/client-3.png" alt="portrait" class="client_portrait">
                                     <p class="heading">Kiriev Egor Leonidovich</p>
                                 </div>
-                                <p class="our_clients--comment">I want to thank the guys for their
-                                        work. WE PUT YOUR SHOWER PART IN REPAIR. I am VERY grateful 
-                                        that I referred to the repair as to my own. GREAT THANKS I 
-                                        EXPRESS THE PROJECT TO GEORGIA FOR ITS PROFESSIONALISM AND APPROACH. 
-                                        THE REPAIR PROCESS WAS TURNED OUT IN TERMS, FASTER THAN ANTICIPATED.
-                                        TEAM MOBILE AND PROFESSIONAL. WORKS PERFORMED QUALITATIVELY WITHOUT COMMENTS. 
-                                        QUALITY SATISFIED. PRICES DEMOCRATIC. I RECOMMEND THESE MASTERS.</p>
+                                <p class="our_clients--comment">I want to thank the guys for their work. We put your shower part in repair.
+                                        I am very grateful that i referred to the repair as to my own. 
+                                        Great thanks i express the project to georgia for its professionalism 
+                                        and approach. The repair process was turned out in terms,
+                                         faster than anticipated. Team mobile and professional. 
+                                         Works performed qualitatively without comments. Quality satisfied.
+                                          Prices democratic. I recommend these masters.</p>
                                 <div class="our_clients--button_group">
-                                    <div class="our_clients--button our_clients--group"><img src="./assets/images/meter.svg" alt="meter"><p>40 m2</p> </div>
-                                    <div class="our_clients--button our_clients--group"><img src="./assets/images/days.svg" alt="days"><p>48 days</p> </div>
+                                    <div class="our_clients--button"><img src="./assets/images/meter.svg" alt="meter"><p>40 m2</p> </div>
+                                    <div class="our_clients--button"><img src="./assets/images/days.svg" alt="days"><p>48 days</p> </div>
                                 </div>
                             </div>
                         </div> 
                 
             </section>
 
-            <section class="contacts">
+            <section class="contacts" id="contacts">
                 <section class="questions">
                     <form class="questions--form" action="#" method="GET" name="questions_form">
                         <legend class="questions--caption">Have any questions?</legend>    
@@ -561,8 +564,8 @@
                 <p class="contacts--caption">Rostov-on-Don, Nansen St., 239 Shopping Center
                         Decorum Tel +7 (928) 768 32 29</p>
                 <div class="contacts--social_btns">
-                    <a href="" class="contacts--social_link"><img src="./assets/images/mail.svg" alt=""></a>
-                    <a href="" class="contacts--social_link"><img src="./assets/images/inst.svg" alt=""></a>
+                    <a href="mailto:zhdanovichkat@gmail.com" class="contacts--social_link"><img src="./assets/images/mail.svg" alt="mail"></a>
+                    <a href="https://www.instagram.com/" class="contacts--social_link"><img src="./assets/images/inst.svg" alt="instagram"></a>
                  </div>
                 <div class="map">
                         <iframe class="map--iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2708.560231199182!2d39.720974215617936!3d47.24474737916233!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40e3b9b47a7e7029%3A0x9e8cb546a10601cc!2z0KLQpiAi0JTQtdC60L7RgNGD0Lwi!5e0!3m2!1sru!2sby!4v1570706430590!5m2!1sru!2sby" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
@@ -577,22 +580,22 @@
             <nav class="navbar">
                 <ul class="navbar--list">
                     <li class="navbar--item">
-                        <a class="navbar--link" href="#">Home</a>
+                        <a class="navbar--link navbar--link-active" href="#home">Home</a>
                     </li>
                     <li class="navbar--item">
-                        <a class="navbar--link" href="#">Projects</a>
+                        <a class="navbar--link" href="#projects">Projects</a>
                     </li>
                     <li class="navbar--item">
-                        <a class="navbar--link" href="#">Measurement</a>
+                        <a class="navbar--link" href="#advantages">Measurement</a>
                     </li>
                     <li class="navbar--item">
-                        <a class="navbar--link" href="#">Team</a>
+                        <a class="navbar--link" href="#team">Team</a>
                     </li>
                     <li class="navbar--item">
-                        <a class="navbar--link" href="#">Reviews</a>
+                        <a class="navbar--link" href="#clients">Reviews</a>
                     </li>
                     <li class="navbar--item">
-                        <a class="navbar--link" href="#">Contacts</a>
+                        <a class="navbar--link" href="#contacts">Contacts</a>
                     </li>
                 </ul>
             </nav>

@@ -1,5 +1,6 @@
 @import "scss/variables";
 
+
 .wrapper {
     width: 1440px;
     height: 100%;
@@ -8,59 +9,14 @@
 }
 
 .header {
-    padding: 0 $padding-general;
-    height: 82px;
-    @include flex();
+    @include header_footer();
+
 
     @media screen and (max-width: $mobile) {
         width: 100%;
     }
 }
 
-.logo--link {
-    @extend %links;
-    @include font_futura_demi();
-    color: $emphasis-color;
-}
-
-.navbar--list {
-    list-style-type: none;
-    @include flex($align: center);
-    @extend %mobile-none;
-}
-
-.navbar--item {
-    width: calc(100% / 7);
-    margin: 0 1rem;
-}
-
-.navbar--link {
-    display: flex;
-    justify-content: center;
-    letter-spacing: 1px;
-    @extend %links;
-    @include font_book();
-
-    &:hover {
-        color: lighten($emphasis-color, 10%);
-    }
-
-    &:active {
-        color: $emphasis-color;
-    }
-}
-
-.tel--link {
-    @extend %links;
-    @include font_futura_demi();
-}
-
-.header--button {
-    .button {    
-        @include font_futura_demi();
-        @include button(); 
-    }
-}
 
 .banner {
     @extend %background;
@@ -72,15 +28,16 @@
     height: 750px;
     margin-left: $padding-general;
     margin-right: 0;
-    background-image: url('./assets/images/background-banner.png');
+    background-image: url('./assets/images/background-banner.jpg');
     
     h2 {
-        width: 37%;
+        width: 45%;
         margin-left: 7%;
         margin-top: 0;
         margin-bottom: 0;
         @include font_YesevaOne();
         font-family: "Yeseva One", serif;
+        font-weight: 700;
 
         span {
             color: $emphasis-color;
@@ -102,8 +59,8 @@
 
     .banner--button {
         @include font_futura_demi();
-        @include button($padding: 1rem 2rem);
-        width: 18%;
+        @include button($padding: 1.5rem 2rem);
+        width: 19%;
         &:first-child {
             margin-left: 7%;
         }
@@ -118,7 +75,7 @@
     .banner--button-transparent {
         margin: 0 0.5%;
         background-color: transparent; 
-        border: solid 1px $emphasis-color;
+        border: solid 1px $secondary-color;
     }
 
     .banner--scroll_down {
@@ -129,6 +86,7 @@
         .button {
             @include flex($align:center, $justify:space-between, $direction: row);
             @include button($background: $primary-color,  $padding: 0);
+            @extend %links;
             width: 100%;
             &:hover {
                 background-color: $hover-color;
@@ -136,20 +94,21 @@
                     color: $primary-color; 
                 }
             }
-
+            
             p {
-            @include font_YesevaOne($font-size: 0.9rem, $line-height: 1.2rem, $transform: uppercase, $color:$secondary-color);
-            font-family: "Yeseva One", serif;
-            width: 90%;
-            margin: 0;
-            padding: 1rem 0 1rem 2rem;
+                @include font_YesevaOne($font-size: 0.9rem, $line-height: 1.5rem, $transform: uppercase, $color:$secondary-color);
+                font-family: "Yeseva One", serif;
+                font-weight: 700;
+                letter-spacing: 1px;
+                width: 90%;
+                margin: 0;
+                padding: 1rem 0 1rem 2rem;
             }
 
             img {
                 padding: 2rem 2.5rem 2rem 2rem;
             }
-        }
-        
+        }   
 
     }
 
@@ -186,7 +145,6 @@
     @include flex($align:left, $justify:space-between, $direction: row);
     padding: 9% 0 4% $padding-general;
     background-color: $primary-color;
-    width: 94%;
 }
 
 .projects--left {
@@ -201,7 +159,6 @@
         @extend %h3;
         display: inline-block;
         font-weight: 700;
-        // margin: 11% 0 0 0;
         margin: 0;
         width: 40%;
     }
@@ -230,37 +187,14 @@
     }
 
     .slider--arrows {
-        @include flex($justify:space-evenly, $direction: row);
-        align-items: center;
-        width: 50%; 
-        position: relative;
-        top: 54px;
-
-        .button_arrow {
-            border: solid 1px transparent;
-            background-color: transparent;
-            cursor: pointer;
-            // &:hover { 
-            // }
-        }
-        
-        .button_cicrle {
-            border: 0;
-            border-radius: 50%;
-            height: 10px;
-            background-color: rgba(255, 255, 255, 0.3);
-            cursor: pointer;
-            &:hover {
-                background-color: rgba(255, 255, 255, 0.9);
-            }
-        }
+        @extend %slider_btns;
+        width: 45%; 
+        top: 4rem;
     }   
 }
 
 .projects--right {
     width: 65%;
-    // position: relative;
-    // z-index: 1;
 
     .projects--navbar {
         @include flex($align: left);
@@ -308,10 +242,12 @@
     .slider {
         position: relative;
         overflow: hidden;
-        width: 100%;
+        max-width: 100%;
+        @include flex($align:flex-start, $justify: normal, $direction: row);
 
-        // .slider--image {
-        // }
+        .slider--image {
+        margin-right: 2%;
+    }
 
         @media screen and (max-width: $mobile) {
             width: 100%;
@@ -352,7 +288,7 @@
         margin: 0.5rem 0;
     }
 
-    .watch {
+    .online_control--image {
         margin-bottom: 4%;
     }
 
@@ -381,7 +317,7 @@
     @include flex($align:center, $justify:space-between, $direction: row);
     justify-content: center;
     padding: 5% 0;
-    form{
+    form {
         width: 60%;
         @include flex($align:center, $justify:space-between, $direction: column);
         @include font_book($font-size: 1.1rem, $line-height: 1.5rem, $transform: none, $color:$primary-color);
@@ -466,24 +402,19 @@
         font-family: "Yeseva One", serif;
         font-weight: 700;
     }
-
+    
     .types_of_repair--item {
         @include font_book($font-size: 0.9rem, $line-height: 1.6rem, $transform: none, $color:$hover-color);
         
     }
-
+    
     .types_of_repair--button {
-        @include font_YesevaOne($font-size: 1.1rem, $line-height: 1.6em, $transform: uppercase, $color:$secondary-color);
-        @include button($background: $emphasis-color, $padding: 1rem 1rem);
-        position: relative;
-        top: 1.5rem;
-        width: 63%;  
+        @extend %card_button;
     }
 }
 
 .advantages {
-    padding-right: $padding-general;
-    padding-bottom: 20%;
+    padding: 5% 0 20% $padding-general;
     background-color: $secondary-color;
     @include flex($align:center, $justify:space-between, $direction: row);
     @extend %mobile-none;
@@ -494,23 +425,27 @@
         background-size: contain;
         width: 70%;
         height: 500px;
+        
+        .advantages--circle {
+
+        }
     }
 
     .advantages--form {
-        width: 30%;
+        width: 40%;
         justify-content: center;
         @include flex($align:unset, $justify:space-between, $direction: column);
         
         .advantages--form-caption {
             @include font_futura_demi($font-size: 1.25rem, $line-height: 1.56rem, $transform: none, $color:$secondary-color);
-            width: 50%;
+            width: 65%;
             margin: 10% 0;
             align-self: center;
             text-align: center;
         }
         
         form {
-            margin: 10% 0 5%;
+            margin: 30% 0 5%;
             padding: 0 10% 5%;
             border: 0;
             background-color: $primary-color;
@@ -532,12 +467,13 @@
                 background-color: $primary-color;
                 border: 0;
                 border-bottom: solid 1px $hover-color;
-                @include font_futura_demi($font-size: 1.1rem, $line-height: 1.56rem, $transform: none, $color:$secondary-color);
+                @include font_book($font-size: 1.1rem, $line-height: 1.56rem, $transform: none, $color:$secondary-color);
                 
-                // &[placeholder] {
-                //     color: $secondary-color;
-                // }
             }
+            ::-webkit-input-placeholder {color:$secondary-color;}
+            ::-moz-placeholder          {color:$secondary-color;}/* Firefox 19+ */
+            :-moz-placeholder           {color:$secondary-color;}/* Firefox 18- */
+            :-ms-input-placeholder      {color:$secondary-color;}
         
             
         
@@ -673,7 +609,7 @@
     }
 
     .design_project--description {
-        width: 50%;
+        width: 60%;
         @include font_book($font-size: 1.25rem, $line-height: 1.7rem, $transform: none, $color:$primary-color);
         text-align: center;
     }
@@ -696,10 +632,24 @@
 
     .design_project--paragraphs-item {  
         @include flex($align:left, $justify:space-between, $direction: column);
-        width: 20%;
-        margin: 0 3%;
+        width: 22%;
         background-color: $secondary-color;
         box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03);
+
+        &:nth-child(2) {
+            margin: 0 1.5%;
+        }
+
+        &:first-child {
+            margin-right: 3.5%;
+        }
+        &:last-child {
+            margin-left: 3.5%;
+        }
+
+        ul {
+            margin-bottom: 0;
+        }
     }
 
     .heading {
@@ -716,12 +666,11 @@
     }
 
     .design_project--button {
-        @include font_YesevaOne($font-size: 1.1rem, $line-height: 1.6em, $transform: uppercase, $color:$secondary-color);
-        @include button($background: $emphasis-color, $padding: 1rem 1rem);
-        position: relative;
-        top: 1.5rem;
-        width: 63%;  
+        @extend %card_button;
     }
+
+   
+
 
     @media screen and (max-width: $mobile) {
         @include flex ($direction:column);
@@ -775,34 +724,9 @@
     
     
         .slider--arrows {
-            @include flex($justify:space-evenly, $direction: row);
-            position: relative;
-            top: 100px;
-            align-items: center;
-            width: 80%; 
-            margin-top: 10%;
-            padding-left: 0;
-            list-style: none;
-    
-            .button_arrow {
-                border: solid 1px transparent;
-                background-color: transparent;
-                cursor: pointer;
-                // &:hover { 
-                // }
-            }
-            
-            .button_cicrle {
-                border: 0;
-                border-radius: 50%;
-                height: 10px;
-                background-color: rgba(255, 255, 255, 0.3);
-                
-                cursor: pointer;
-                &:hover {
-                    background-color: rgba(255, 255, 255, 0.9);
-                }
-            }
+            @extend %slider_btns;
+            width: 80%;
+            top: 5rem;
         }   
     }
     
@@ -851,11 +775,9 @@
     @extend %mobile-none;
 }
 
-.our_team {
-   
+.our_team {   
     @include flex($align:center, $justify:space-between, $direction: column);
     background: linear-gradient(to bottom, $primary-color 50%, $secondary-color 50%);
-    // padding-top: 10%;
 
     .our_team--caption {
         @extend %h4;
@@ -872,11 +794,12 @@
     .our_team--images {
         @include flex($align:center, $justify:space-around, $direction: row);
         margin-top: 2%;
+        width: 70%;
         
     }
     .images_group {
         position: relative;
-        width: 32%;
+        // width: 32%;
         margin-left: 10%;
         &:first-child {
             margin-left: 0;
@@ -897,8 +820,8 @@
     
     .our_team--paragraphs-item {  
         @include flex($align:center, $justify:space-between, $direction: column);
-        width: 15%;
-        margin: 0 3%;
+        width: 17%;
+        margin: 0 4%;
         background-color: $secondary-color;
         box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03);
         &:nth-child(2) {
@@ -926,17 +849,20 @@
     
     .our_team--item {
         @include font_book($font-size: 0.9rem, $line-height: 1.6rem, $transform: none, $color:$hover-color);
+        margin: 0 0 1rem;
         
     }
 
     .our_team--button {
+        position: static;
+        width: 90%;
+        padding: 1rem 0.5rem;
         @include font_YesevaOne($font-size: 0.8rem, $line-height: 1.6em, $transform: uppercase, $color:$secondary-color);
-        @include button($background: $emphasis-color, $padding: 1rem 1rem);
-        position: relative;
-        top: 1rem;
         font-family: "Yeseva One", serif;
-        font-weight: 700;
-        border-radius: 0;
+        font-weight: 700;   
+        letter-spacing: 1px;
+        text-align: center;
+        @extend %card_button;
     }
     
     .our_team--description-bottom {
@@ -957,7 +883,7 @@
 .our_clients {
     @include flex($align:center, $justify:space-between, $direction: column);
     background: $secondary-color;
-    padding: 10% $padding-general 30%;
+    padding: 5% $padding-general 30%;
     
     .our_clients--caption {
         @extend %h4;
@@ -1005,25 +931,34 @@
     
     .our_clients--comment {
         @include font_book($font-size: 0.9rem, $line-height: 1.5rem, $transform: none, $color:$hover-color);
-        text-transform: lowercase;
     }
 
     .our_clients--button_group {
         position: relative;
         top: 3rem;
         left: -4%;
-        @include flex($align:center, $justify:space-between, $direction: row);
+        width: 86%;
+        @include flex($align:flex-start, $justify:space-between, $direction: row);
+        box-shadow: 0px 10px 20px rgba(237, 192, 120, 0.2);
+ 
+        .our_clients--button {
+            @include button($background: $emphasis-color, $padding: 0 1rem);
+            @include flex($align:center, $justify:space-around, $direction: row);
+            border-radius: 0;
+            
+            p {
+                @include font_YesevaOne($font-size: 1rem, $line-height: 1.6em, $transform: uppercase, $color:$secondary-color);
+                font-family: "Yeseva One", serif;
+                font-weight: 700;
+            }
+            &:first-child {
+                width: 36%;
+            }
+            &:last-child {
+                width: 43%;
+            }
+        }
     }
-    .our_clients--button {
-        @include flex($align:left, $justify:space-between, $direction: row);
-        @include font_YesevaOne($font-size: 0.8rem, $line-height: 1.6em, $transform: uppercase, $color:$secondary-color);
-        @include button($background: $emphasis-color, $padding: 0.5rem 2.5rem);
-        border-radius: 0;
-        font-family: "Yeseva One", serif;
-        font-weight: 700;
-        align-items: center;
-    }
-    
     
     @extend %mobile-none;
 }
@@ -1032,23 +967,25 @@
 
 
 .contacts {
-    background-image: url('./assets/images/background-contact.png');
-    background: linear-gradient(180deg, rgba(24, 24, 24, 0.9) 3.47%, rgba(24, 24, 24, 0.72) 100%);
-    background-position-x: right;
-    background-size: contain; 
-    background-repeat: no-repeat    ;
+    padding-bottom: 5%;
+    background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+     url('./assets/images/background-contacts.jpg');
+    background-repeat: no-repeat;
+    background-position-y: bottom;
+    background-size: cover;
     @extend %background;
 
     .questions {
         position: relative;
         top: -13rem;
-        width: 40%;
+        width: 50%;
         margin: 0 auto;
         margin-bottom: -13rem;
         background: transparent;
 
         .questions--form {
-            padding: 0 10% 5%;
+            padding: 0 0 5%;
+            width: 100%;
             border: 0;
             background-color: $primary-color;
             @include flex($align:center, $justify:space-between, $direction: column);
@@ -1058,6 +995,9 @@
                 @extend %h4;
                 font-family: "Yeseva One", serif;
                 color: $secondary-color;
+            }
+            .fieldset {
+                width: 65%;
             }
             .fieldgroup {
                 display: flex;
@@ -1079,12 +1019,12 @@
                 background-color: $primary-color;
                 border: 0;
                 border-bottom: solid 1px $hover-color;
-                @include font_futura_demi($font-size: 1.1rem, $line-height: 1.56rem, $transform: none, $color:$secondary-color);
-                
-                // &[placeholder] {
-                //     color: $secondary-color;
-                // }
+                @include font_book($font-size: 1.1rem, $line-height: 1.56rem, $transform: none, $color:$secondary-color);
             }
+            ::-webkit-input-placeholder {color:$secondary-color;}
+            ::-moz-placeholder          {color:$secondary-color;}/* Firefox 19+ */
+            :-moz-placeholder           {color:$secondary-color;}/* Firefox 18- */
+            :-ms-input-placeholder      {color:$secondary-color;}
         
             
         
@@ -1095,7 +1035,7 @@
             }
             .form--button {
                 width: 50%;
-                margin: 3% 5%;
+                margin: 0% 5%;
                 @include button($background: $emphasis-color, $padding: 1rem 1rem);
                 @include font_futura_demi($font-size: 0.9rem, $line-height: 1.6rem, $transform: uppercase, $color:$secondary-color);
             }
@@ -1134,8 +1074,8 @@
         filter: grayscale(100%);
         .map--iframe {
             align-self: center;
-            width: 80%;
-            margin: 0 auto 15%;
+            width: 60%;
+            margin: 0 auto;
         }
 
 
@@ -1150,85 +1090,10 @@
 
 .footer {
 
-    padding: 0 $padding-general;
-    height: 82px;
-    @include flex();
-
+    @include header_footer();
+    padding: 3% $padding-general;    
+    
     @media screen and (max-width: $mobile) {
-        width: 100%;
-    }
-
-    .logo--link {
-        @extend %links;
-        @include font_futura_demi();
-        color: $emphasis-color;
-    }
-
-    .navbar--list {
-        list-style-type: none;
-        @include flex($align: center);
-        @extend %mobile-none;
-    }
-
-    .navbar--item {
-        width: calc(100% / 7);
-        margin: 0 1rem;
-    }
-
-    .navbar--link {
-        display: flex;
-        justify-content: center;
-        letter-spacing: 1px;
-        @extend %links;
-        @include font_book();
-
-        &:hover {
-            color: lighten($emphasis-color, 10%);
-        }
-
-        &:active {
-            color: $emphasis-color;
-        }
-    }
-
-    .tel--link {
-        @extend %links;
-        @include font_futura_demi();
-    }
-
-    .header--button {
-        .button {    
-            @include font_futura_demi();
-            @include button(); 
-        }
     }
     @extend %mobile-none;
 }
-
-
-
-
-// main {
-//     height: 100vh;
-//     margin-top: 314px;
-//     display: flex;
-// }
-// main div {
-//     border: solid 5px red;
-//     flex-grow: 1;
-
-// }
-// footer {
-//     height: 20vh;;
-// }
-
-// @media (max-width: 800px) {
-//     .sidebar {
-//         display: none;
-//     }
-//     .wrapper {
-//         margin: 0;
-//         width: 100vw;
-//     }
-// }
-
