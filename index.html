@@ -13,7 +13,7 @@
     <div class="wrapper">
         <header class="header" id="home">
             <div class="logo">
-                <a class="logo--link" href="./index.html">IC "Repair Design Project"</a>
+                    <h1><a class="logo--link" href="./index.html">IC "Repair Design Project"</a></h1>
             </div>
             <nav class="navbar">
                 <ul class="navbar--list">
@@ -141,7 +141,7 @@
             <section class="online_control">
                 <h4>online control</h4>
                 <img class="online_control--image" src="./assets/images/online-control.svg" alt="online-control">
-                <iframe class="online_control--video" width="560" height="315" src="https://www.youtube.com/embed/jz2zhmMDaJg" frameborder="0" 
+                <iframe class="online_control--video" width="560" height="315" src="https://www.youtube.com/embed/jz2zhmMDaJg" 
                 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 <img class="vector" src="./assets/images/vector-hor.svg" alt="vector">
                 <p class="online_control--description">At each facility, a camera is installed that broadcasts the progress of work on the clock. At any time, you can go to our website and monitor the progress of work in your apartment. 
@@ -154,11 +154,11 @@
                     <div class="fieldset">
                         <div class="field">
                             <label for="name">Name</label>
-                            <input id="name" placeholder="What is your name:" type="text">
+                            <input id="name" placeholder="What is your name:" type="text" required>
                         </div>
                         <div class="field">
                             <label for="phone">Phone</label>
-                            <input id="phone" placeholder="Your phone number:" type="tel">
+                            <input id="phone" placeholder="Your phone number:" type="tel" required pattern="[0-9]{8,18}">
                         </div>
                         <button class="form--button" type="submit">Submit</button>
                     </div>
@@ -255,14 +255,14 @@
                         </div>
                         <div class="field">
                             <label for="phone-2">Phone</label>
-                            <input id="phone-2" required placeholder="Your phone number:" type="tel">
+                            <input id="phone-2" required placeholder="Your phone number:" type="tel" pattern="[0-9]{8,18}">
                         </div>
                         <div class="field">
                             <label for="email-2">Email</label>
                             <input id="email-2" required placeholder="Your email" type="email">
                         </div>
                         <div class="checkbox">
-                            <input type="checkbox" id="check-2" checked required>
+                            <input type="checkbox" id="check-2" required checked>
                             <label for="check-2"> I agree to the processing of personal data</label>
                         </div>
                         <button class="form--button" type="submit">Call the measurer</button>
@@ -551,38 +551,38 @@
             <section class="contacts">
                 <section class="questions" id="contacts">
                     <form class="questions--form" action="#" method="GET" name="questions_form">
-                        <legend class="questions--caption">Have any questions?</legend>    
+                        <a class="questions--caption">Have any questions?</a>    
                         <div class="fieldset">
                             <div class="fieldgroup">
                                 <div class="field">
                                     <label for="name-3">Name</label>
-                                    <input id="name-3" placeholder="What is your name:" type="text">
+                                    <input id="name-3"  required placeholder="What is your name:" type="text">
                                 </div>
                                 <div class="field">
                                     <label for="phone-3">Phone</label>
-                                    <input id="phone-3" placeholder="Your phone number:" type="tel">
+                                    <input id="phone-3" placeholder="Your phone number:" type="tel" pattern="[0-9]{8,18}" required>
                                 </div>
                             </div>
                             <div class="field">
                                 <label for="question">Question</label>
-                                <input id="question" placeholder="I want to know:" type="text">
+                                <input id="question" required placeholder="I want to know:" type="text">
                             </div>
                         </div>
                         <div class="checkbox">
-                            <input type="checkbox" id="check" checked required>
-                            <label for="check"> I agree to the processing of personal data</label>
+                            <input type="checkbox" id="check-3" checked required>
+                            <label for="check-3"> I agree to the processing of personal data</label>
                         </div>
                         <button class="form--button" type="submit">Submit</button>
                     </form>
                 </section>       <!-- questions -->
                 <p class="contacts--caption">Rostov-on-Don, Nansen St., 239 Shopping Center
-                        Decorum Tel +7 (928) 768 32 29</p>
+                        Decorum Tel <a href="tel:+79287683229" class="contacts--phone">+7 (928) 768 32 29</a></p>
                 <div class="contacts--social_btns">
-                    <a href="mailto:zhdanovichkat@gmail.com" class="contacts--social_link"><img src="./assets/images/mail.svg" alt="mail"></a>
-                    <a href="https://www.instagram.com/" class="contacts--social_link"><img src="./assets/images/inst.svg" alt="instagram"></a>
+                    <div class="social--btn"><a href="mailto:zhdanovichkat@gmail.com" class="contacts--social_link"><img src="./assets/images/mail.svg" alt="mail"></a></div>
+                    <div class="social--btn"><a href="https://www.instagram.com/" class="contacts--social_link"><img src="./assets/images/inst.svg" alt="instagram"></a></div>
                  </div>
                 <div class="map">
-                        <iframe class="map--iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2708.560231199182!2d39.720974215617936!3d47.24474737916233!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40e3b9b47a7e7029%3A0x9e8cb546a10601cc!2z0KLQpiAi0JTQtdC60L7RgNGD0Lwi!5e0!3m2!1sru!2sby!4v1570706430590!5m2!1sru!2sby" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                        <iframe class="map--iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2708.560231199182!2d39.720974215617936!3d47.24474737916233!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40e3b9b47a7e7029%3A0x9e8cb546a10601cc!2z0KLQpiAi0JTQtdC60L7RgNGD0Lwi!5e0!3m2!1sru!2sby!4v1570706430590!5m2!1sru!2sby" width="600" height="450" allowfullscreen=""></iframe>
                 </div>
         </section> <!-- contacts -->
 

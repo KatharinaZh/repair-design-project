@@ -23,7 +23,7 @@
   src: url("../assets/fonts/ProximaNovaRegular.ttf") format("TrueType");
 }
 
-.header .logo--link, .header .navbar--link, .banner .banner--scroll_down .button, .banner .sidebar p a, .projects--right .projects--navbar .projects--link, .we_realize .we_realize--navbar .we_realize--link, .contacts .contacts--social_link, .footer .logo--link, .footer .navbar--link {
+.header .logo--link, .header .navbar--link, .banner .banner--scroll_down .button, .banner .sidebar p a, .projects--right .projects--navbar .projects--link, .we_realize .we_realize--navbar .we_realize--link, .contacts .contacts--phone, .contacts .contacts--social_link, .footer .logo--link, .footer .navbar--link {
   text-decoration: none;
   color: #ffffff;
 }
@@ -51,6 +51,13 @@
   top: 1.5rem;
   width: 63%;
   border-radius: 0;
+}
+
+.types_of_repair .types_of_repair--button:hover, .design_project .design_project--button:hover, .our_team .our_team--button:hover {
+  color: #000000;
+  background-color: rgba(152, 152, 152, 0.9);
+  border: solid 1px transparent;
+  cursor: pointer;
 }
 
 .projects--left .slider--arrows, .how_work .how_work--left .slider--arrows {
@@ -212,6 +219,10 @@
   font-weight: bold;
 }
 
+.header .tel--link:hover {
+  color: #ffffff;
+}
+
 .header .header--button .button {
   font-family: "FuturaDemiC", sans-serif;
   font-size: 0.9rem;
@@ -224,6 +235,13 @@
   background-color: #E3B873;
   border: 0;
   border-radius: 2px;
+}
+
+.header .header--button .button:hover {
+  color: #000000;
+  background-color: rgba(152, 152, 152, 0.9);
+  border: solid 1px transparent;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 375px) {
@@ -307,14 +325,15 @@
   width: 19%;
 }
 
-.banner .banner--button:first-child {
-  margin-left: 7%;
-}
-
 .banner .banner--button:hover {
   color: #000000;
   background-color: rgba(152, 152, 152, 0.9);
   border: solid 1px transparent;
+  cursor: pointer;
+}
+
+.banner .banner--button:first-child {
+  margin-left: 7%;
 }
 
 .banner .banner--button-transparent {
@@ -349,6 +368,13 @@
   border: 0;
   border-radius: 2px;
   width: 100%;
+}
+
+.banner .banner--scroll_down .button:hover {
+  color: #000000;
+  background-color: rgba(152, 152, 152, 0.9);
+  border: solid 1px transparent;
+  cursor: pointer;
 }
 
 .banner .banner--scroll_down .button:hover {
@@ -412,6 +438,10 @@
   font-weight: bold;
   color: #E3B873;
   margin-right: 40px;
+}
+
+.banner .sidebar p a:hover {
+  color: #ffffff;
 }
 
 .banner .sidebar p img {
@@ -619,6 +649,13 @@
 }
 
 .projects--right .slider .slider--button .slider--button-button:hover {
+  color: #000000;
+  background-color: rgba(152, 152, 152, 0.9);
+  border: solid 1px transparent;
+  cursor: pointer;
+}
+
+.projects--right .slider .slider--button .slider--button-button:hover {
   background-color: #c88b28;
 }
 
@@ -651,6 +688,7 @@
 .online_control .online_control--video {
   width: 560px;
   margin: 0 auto;
+  border: 0;
 }
 
 @media screen and (max-width: 375px) {
@@ -807,6 +845,13 @@
   text-transform: uppercase;
   color: #ffffff;
   font-weight: bold;
+}
+
+.form form .form--button:hover {
+  color: #000000;
+  background-color: rgba(152, 152, 152, 0.9);
+  border: solid 1px transparent;
+  cursor: pointer;
 }
 
 .form form .checkbox input[type="checkbox"]:checked,
@@ -1264,6 +1309,13 @@
   text-transform: uppercase;
   color: #ffffff;
   font-weight: bold;
+}
+
+.advantages .advantages--form form .form--button:hover {
+  color: #000000;
+  background-color: rgba(152, 152, 152, 0.9);
+  border: solid 1px transparent;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 375px) {
@@ -2036,6 +2088,13 @@
   border-radius: 0;
 }
 
+.our_clients .our_clients--button_group .our_clients--button:hover {
+  color: #000000;
+  background-color: rgba(152, 152, 152, 0.9);
+  border: solid 1px transparent;
+  cursor: pointer;
+}
+
 .our_clients .our_clients--button_group .our_clients--button p {
   font-family: "Yeseva One", sans-serif;
   font-size: 1rem;
@@ -2245,6 +2304,13 @@
   font-weight: bold;
 }
 
+.contacts .questions .questions--form .form--button:hover {
+  color: #000000;
+  background-color: rgba(152, 152, 152, 0.9);
+  border: solid 1px transparent;
+  cursor: pointer;
+}
+
 @media screen and (max-width: 375px) {
   .contacts .questions .questions--form {
     width: 100%;
@@ -2290,6 +2356,10 @@
   color: #E3B873;
 }
 
+.contacts .contacts--phone {
+  color: #E3B873;
+}
+
 .contacts .contacts--social_btns {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2307,6 +2377,27 @@
   margin: 4% auto;
 }
 
+.contacts .social--btn {
+  padding: 1rem 1rem;
+  color: #ffffff;
+  background-color: #E3B873;
+  border: 0;
+  border-radius: 2px;
+  width: 34%;
+  text-align: center;
+  vertical-align: middle;
+  border-radius: 50%;
+  padding: 0.5rem 0;
+  border: 1px solid transparent;
+}
+
+.contacts .social--btn:hover {
+  color: #000000;
+  background-color: rgba(152, 152, 152, 0.9);
+  border: solid 1px transparent;
+  cursor: pointer;
+}
+
 .contacts .map {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2322,6 +2413,7 @@
       align-self: center;
   width: 60%;
   margin: 0 auto;
+  border: 0;
 }
 
 @media screen and (max-width: 375px) {
@@ -2416,6 +2508,10 @@
   font-weight: bold;
 }
 
+.footer .tel--link:hover {
+  color: #ffffff;
+}
+
 .footer .header--button .button {
   font-family: "FuturaDemiC", sans-serif;
   font-size: 0.9rem;
@@ -2428,5 +2524,12 @@
   background-color: #E3B873;
   border: 0;
   border-radius: 2px;
+}
+
+.footer .header--button .button:hover {
+  color: #000000;
+  background-color: rgba(152, 152, 152, 0.9);
+  border: solid 1px transparent;
+  cursor: pointer;
 }
 /*# sourceMappingURL=style.css.map */
