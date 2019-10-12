@@ -318,7 +318,7 @@
 }
 
 .banner .banner--button-transparent {
-  margin: 0 0.5%;
+  margin-left: 1%;
   background-color: transparent;
   border: solid 1px #ffffff;
 }
@@ -464,9 +464,10 @@
 .projects--left .projects_example--description {
   font-family: "FuturaBookC", sans-serif;
   font-size: 1.1rem;
-  line-height: 1.8rem;
+  line-height: 2rem;
   text-transform: none;
   color: #ffffff;
+  width: 90%;
 }
 
 .projects--left .projects--grid {
@@ -669,7 +670,7 @@
   text-transform: none;
   color: #000000;
   text-align: center;
-  width: 54%;
+  width: 50%;
 }
 
 .form {
@@ -750,11 +751,29 @@
           align-items: center;
   border: 0;
   margin-bottom: 3%;
+  /* Firefox 19+ */
+  /* Firefox 18- */
 }
 
 .form form .fieldset input {
   border: 0;
-  border-bottom: solid 1px #000000;
+  border-bottom: solid 1px rgba(152, 152, 152, 0.9);
+}
+
+.form form .fieldset ::-webkit-input-placeholder {
+  color: #000000;
+}
+
+.form form .fieldset ::-moz-placeholder {
+  color: #000000;
+}
+
+.form form .fieldset :-moz-placeholder {
+  color: #000000;
+}
+
+.form form .fieldset :-ms-input-placeholder {
+  color: #000000;
 }
 
 .form form .field {
@@ -936,11 +955,15 @@
   -webkit-box-align: left;
       -ms-flex-align: left;
           align-items: left;
-  width: 20%;
+  width: 21%;
   margin: 0 3%;
   background-color: #ffffff;
   -webkit-box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03);
           box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03);
+}
+
+.types_of_repair .types_of_repair--paragraphs-item ul {
+  margin-bottom: 0;
 }
 
 .types_of_repair .heading {
@@ -965,7 +988,7 @@
 }
 
 .advantages {
-  padding: 5% 0 20% 5.5%;
+  padding: 0 0 17% 0;
   background-color: #ffffff;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -986,7 +1009,75 @@
   background-image: url("./assets/images/background-advantages.png");
   background-size: contain;
   width: 70%;
-  height: 500px;
+  height: 600px;
+  overflow: hidden;
+}
+
+.advantages .advantages--list .circle {
+  position: relative;
+  top: 7%;
+  left: -18%;
+  width: 70%;
+  height: 107%;
+  background-color: transparent;
+  border: solid 3px #E3B873;
+  border-radius: 50%;
+}
+
+.advantages .advantages--list .circle_group {
+  position: absolute;
+  width: 72%;
+}
+
+.advantages .advantages--list .circle_group:first-child {
+  top: 8%;
+  left: 79%;
+}
+
+.advantages .advantages--list .circle_group:nth-child(2) {
+  top: 25%;
+  left: 91%;
+}
+
+.advantages .advantages--list .circle_group:nth-child(3) {
+  top: 50%;
+  left: 95%;
+}
+
+.advantages .advantages--list .circle_group:last-child {
+  top: 75%;
+  left: 85%;
+}
+
+.advantages .advantages--list .circle_item {
+  position: absolute;
+  width: 42px;
+  height: 42px;
+  background-color: #E3B873;
+  border-radius: 50%;
+  text-align: center;
+  border: solid 10px #ffffff;
+}
+
+.advantages .advantages--list .circle_item--number {
+  margin: 13% 0 0;
+  font-family: "Yeseva One", sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.6em;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #ffffff;
+  font-family: "Yeseva One", serif;
+  font-weight: 700;
+}
+
+.advantages .advantages--list .circle_group--text {
+  font-family: "FuturaBookC", sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.56rem;
+  text-transform: none;
+  color: #000000;
+  padding-left: 18%;
 }
 
 .advantages .advantages--form {
@@ -1216,7 +1307,6 @@
 }
 
 .we_realize {
-  margin-left: 5.5%;
   background-image: url("./assets/images/background-realize.png");
   background-repeat: no-repeat;
   display: -webkit-box;
@@ -1235,13 +1325,14 @@
 }
 
 .we_realize .we_realize--left {
-  width: 40%;
+  width: 37%;
   height: 100%;
   padding-left: 5%;
   padding-bottom: 5%;
 }
 
 .we_realize .we_realize--caption {
+  width: 70%;
   margin: 25% 15% 7% 0;
   font-weight: 700;
 }
@@ -1297,7 +1388,7 @@
       grid-template-columns: 1fr 1fr;
   -ms-grid-rows: 1fr 1fr;
       grid-template-rows: 1fr 1fr;
-  width: 60%;
+  width: 63%;
   height: 100%;
   margin-bottom: -66%;
 }
@@ -1358,7 +1449,7 @@
 }
 
 .design_project .design_project--description {
-  width: 60%;
+  width: 46%;
   font-family: "FuturaBookC", sans-serif;
   font-size: 1.25rem;
   line-height: 1.7rem;
@@ -1763,7 +1854,7 @@
 }
 
 .our_team .our_team--description-bottom {
-  width: 50%;
+  width: 39%;
   font-family: "FuturaBookC", sans-serif;
   font-size: 1.25rem;
   line-height: 2.1rem;
@@ -1805,7 +1896,7 @@
       -ms-flex-align: center;
           align-items: center;
   background: #ffffff;
-  padding: 5% 5.5% 30%;
+  padding: 0 5.5% 30%;
 }
 
 .our_clients .our_clients--caption {
@@ -2207,12 +2298,12 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  width: 7%;
   margin: 4% auto;
 }
 
