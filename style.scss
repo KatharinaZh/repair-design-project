@@ -1023,8 +1023,6 @@ body {
         @media screen and (max-width: $mobile) {
             width: 80%;
             left: -8%;
-
-
         }
 
     }
@@ -1258,7 +1256,7 @@ body {
         }
     }
 
-    .design_project--list {
+    .our_team--list {
         @include flex($align:center, $justify:space-between, $direction: column);
         position: relative;
         top: -6rem;
@@ -1273,7 +1271,8 @@ body {
         
         @media screen and (max-width: $mobile) {
             top: -4rem;
-            width: 65%;
+            left: 0;
+            width: 64%;
         }
     }
 

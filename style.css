@@ -2572,7 +2572,7 @@ body {
   }
 }
 
-.our_team .design_project--list {
+.our_team .our_team--list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2595,14 +2595,15 @@ body {
           box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03);
 }
 
-.our_team .design_project--list ul {
+.our_team .our_team--list ul {
   margin-bottom: 0;
 }
 
 @media screen and (max-width: 410px) {
-  .our_team .design_project--list {
+  .our_team .our_team--list {
     top: -4rem;
-    width: 65%;
+    left: 0;
+    width: 64%;
   }
 }
 
