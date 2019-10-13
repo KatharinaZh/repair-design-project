@@ -1,3 +1,9 @@
+@mixin tablet-none() {
+    @media screen and (max-width: $tablet) {
+            display: none;
+    }
+}
+
 @mixin mobile-none() {
     @media screen and (max-width: $mobile) {
         display: none;
@@ -23,6 +29,7 @@
     .navbar--list {
         list-style-type: none;
         @include flex($align: center);
+        @include tablet-none();
         @include mobile-none();
     }
 
@@ -67,8 +74,10 @@
             @include font_futura_demi();
             @include button($padding: 0.8rem 2.5rem); 
         }
-        @include mobile-none();
 
+        @media screen and (max-width: 1050px) {
+            display: none;
+        }
     }
 
 }

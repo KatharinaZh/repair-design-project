@@ -11,7 +11,7 @@ body {
     max-width: 1440px;
     height: 100%;
     margin: 0 auto;
-    @media screen and (max-width: $mobile) {
+    @media screen and (max-width: 1050px) {
         width: 100%;
     }
 }
@@ -38,9 +38,12 @@ body {
     margin-right: 0;
     padding: 15% 0 20%;
     background-image: url('./assets/images/background-banner.jpg');
-    @media screen and (max-width: $mobile) {
+
+    @media screen and (max-width: $tablet) {
         width: 100%;
         margin-left: 0;
+    }
+    @media screen and (max-width: $mobile) {
         padding: 15% 0 7%;
         background-size: 100% 100%;
     }
@@ -151,6 +154,7 @@ body {
         position: absolute;
         left: -6%;   /*relatively banner*/
         top: 79%;
+        @include tablet-none();
         @include mobile-none();
 
         
@@ -196,7 +200,8 @@ body {
 
 .projects--left {
     width: 35%;
-    @media screen and (max-width: $mobile) {
+
+    @media screen and (max-width: $tablet) {
         width: 100%;
     }
     
@@ -309,6 +314,7 @@ body {
         @extend %slider_btns;
         width: 45%; 
         top: 4rem;
+        @include tablet-none;
         @include mobile-none();
 
     }   
@@ -316,6 +322,7 @@ body {
 
 .projects--right {
     width: 65%;
+    @include tablet-none;
     @include mobile-none();
 
     .projects--navbar {
@@ -456,6 +463,7 @@ body {
     @include flex($align:center, $justify:space-between, $direction: row);
     justify-content: center;
     padding: 5% 0;
+    
     @media screen and (max-width: $mobile) {
         flex-direction: column;
         width: 100%;
@@ -466,6 +474,7 @@ body {
         width: 60%;
         @include flex($align:center, $justify:space-between, $direction: column);
         @include font_book($font-size: 1.1rem, $line-height: 1.5rem, $transform: none, $color:$primary-color);
+        
         @media screen and (max-width: $mobile) {
             flex-direction: column;
             width: 100%;
@@ -481,6 +490,7 @@ body {
                 width: 100%;
                 flex-direction: column;
             }
+
             input {
                 border: 0;
                 border-bottom: solid 1px $hover-color;
@@ -556,7 +566,6 @@ body {
     .types_of_repair--paragraphs {
         @include flex($align:center, $justify:center, $direction: row);
         width: 100%;
-        // background-color: $secondary-color;
         @media screen and (max-width: $mobile) {
             flex-direction: column;
         }
@@ -564,9 +573,11 @@ body {
     
     .types_of_repair--item {  
         margin: 0 1.5%;
+        img {
+            max-width: 100%;
+        }
 
         @media screen and (max-width: $mobile) {
-            // @include flex ($direction:column);
             img {
                 width: 96%;                
             }
@@ -630,6 +641,9 @@ body {
     padding: 0 0 17% 0;
     background-color: $secondary-color;
     @include flex($align:center, $justify:space-between, $direction: row);
+    @media screen and (max-width: 1050px) {
+        display: none;
+    }
     @include mobile-none();
 
     .advantages--list {
@@ -858,22 +872,26 @@ body {
     .we_realize--img1 {
         position: relative;
         top: -10%;
+        max-width: 100%;
         @include mobile-none();
     }
     .we_realize--img2 {
         position: relative;
         top: -20%;
+        max-width: 100%;
         @include mobile-none();
     }
     .we_realize--img3 {
         position: relative;
         top: -11%;
         margin-bottom: -10%;
+        max-width: 100%;
         @include mobile-none();
     }
     .we_realize--img4 {
         position: relative;
         top: -66%;
+        max-width: 100%;
         @include mobile-none();
     }
 
@@ -976,6 +994,10 @@ body {
         @include flex($align:left, $justify:space-between, $direction: column);      
         margin: 0 1.5%;
 
+        img {
+        max-width: 100%;
+        }
+
         @media screen and (max-width: $mobile) {
             @include flex ($direction:column);
             img {
@@ -1045,7 +1067,9 @@ body {
         width: 94%;
         padding: 0 0 4% $padding-general;
         background-color: $primary-color;
-
+        @media screen and (max-width: 1050px) {
+            display: none;
+        }
         @include mobile-none();
     
     .how_work--left {
@@ -1209,10 +1233,15 @@ body {
     .images_group {
         position: relative;
         
+        .team_portrait {
+            max-width: 100%;
+        }
+        
         .our_team--icon {
             position: absolute;
             top: -13%;
             left: -19%;
+            max-width: 100%;
         }
 
         @media screen and (max-width: $mobile) {
@@ -1411,6 +1440,10 @@ body {
         margin-bottom: -13rem;
         background: transparent;
 
+        @media screen and (max-width: 1050px) and (min-width: $mobile) {
+            display: none;
+        }
+
         @media screen and (max-width: $mobile) {
             position: static;
             width: 100%;
@@ -1506,9 +1539,7 @@ body {
         }
         
     }
-    
-    .contacts--group {}
-    
+        
     .contacts--caption {
         text-align: center;
         width: 37%; 
@@ -1548,6 +1579,10 @@ body {
         border-radius: 50%;
         padding: 0.5rem 0;
         border: 1px solid transparent;
+
+        @media screen and (max-width: 1050px) and (min-width: $mobile){
+            background-color: transparent;
+        }
         
     }
     
